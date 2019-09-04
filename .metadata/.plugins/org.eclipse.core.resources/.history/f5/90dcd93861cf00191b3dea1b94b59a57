@@ -1,0 +1,63 @@
+/*
+ * utn.operaciones.c
+ *
+ *  Created on: 4 sep. 2019
+ *      Author: alumno
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+float utn_pideDosNumeros(float* numberOne,float* numberTwo)
+{
+	float number1;
+	float number2;
+
+	printf("Ingrese un número: \n");
+	__fpurge(stdin);
+	scanf ("%.2f",&number1);
+
+	printf("Ingrese otro número: \n");
+	__fpurge(stdin);
+	scanf ("%.2f",&number2);
+
+	*numberOne=number1;
+	*numberTwo=number2;
+	return 0;
+}
+float utn_sumar(float numberOne,float numberTwo,float* resultSum)
+{
+	float result=numberOne+numberTwo;
+	*resultSum=result;
+	return 0;
+}
+float utn_restar(float numberOne,float numberTwo,float* resultSub)
+{
+	float result=numberOne-numberTwo;
+	*resultSub=result;
+	return 0;
+}
+float utn_multiplicar(float numberOne,float numberTwo,float* resultMult)
+{
+	float result=numberOne*numberTwo;
+	*resultMult=result;
+	return 0;
+}
+float utn_dividir(float numberOne,float numberTwo,float* resultDiv)
+{
+	float result=numberOne/numberTwo;
+	*resultDiv=result;
+	return 0;
+}
+
+float utn_factorizar2Numeros(float numberOne,float numberTwo,float* resultFactA,float* resultFactB)
+{
+	float resultA;
+	float resultB;
+
+	resultA=(!numberOne);
+	resultB=(!numberTwo);
+	*resultFactA=resultA;
+	*resultFactB=resultB;
+	return 0;
+}
+

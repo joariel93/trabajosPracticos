@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "utn_operaciones.h"
+
+int main (void){
+int firstNumber;
+int secondNumber;
+int sumResult;
+int subtractionResult;
+int multiplicationResult;
+int divisionResult;
+int factorialResultA;
+int factorialResultB;
+
+utn_pideDosNumeros(&firstNumber,&secondNumber);
+utn_sumar(firstNumber,secondNumber,&sumResult);
+utn_restar(firstNumber,secondNumber,&subtractionResult);
+utn_multiplicar(firstNumber,secondNumber,&multiplicationResult);
+if(secondNumber!=0)
+{
+	utn_dividir(firstNumber,secondNumber,&divisionResult);
+}
+utn_factorizar2Numeros(firstNumber,secondNumber,&factorialResultA,&factorialResultB);
+
+printf("Los números ingresados han sido: %d y %d\n",firstNumber,secondNumber);
+printf("La suma de los números es: %d\n",sumResult);
+printf("La resta del primero con el segundo es: %d\n",subtractionResult);
+printf("La mulitplicacion de ambos números es: %d\n",multiplicationResult);
+if(secondNumber==0)
+{
+	printf("No es posible dividir por cero.\n");
+}
+else
+{
+	printf("La división del primer numero por el segundo es: %d\n",divisionResult);
+}
+	printf("El factorial del primer número es: %d y del segundo es: %d\n",factorialResultA,factorialResultB);
+return 0;
+}

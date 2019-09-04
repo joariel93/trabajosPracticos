@@ -1,0 +1,62 @@
+/*
+ * utn.operaciones.c
+ *
+ *  Created on: 4 sep. 2019
+ *      Author: alumno
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+int utn_pideDosNumeros(int *numberOne,int *numberTwo)
+{
+	int number1=*numberOne;
+	int number2=*numberTwo;
+
+	printf("Ingrese un número: \n");
+	scanf ("%d",&number1);
+
+	printf("Ingrese otro número: \n");
+	__fpurge(stdin);
+	scanf ("%d",&number2);
+
+	*numberOne=number1;
+	*numberTwo=number2;
+	return 0;
+}
+int utn_sumar(int numberOne,int numberTwo,int* resultSum)
+{
+	int result=numberOne+numberTwo;
+	*resultSum=result;
+	return 0;
+}
+int utn_restar(int numberOne,int numberTwo,int* resultSub)
+{
+	int result=numberOne-numberTwo;
+	*resultSub=result;
+	return 0;
+}
+int utn_multiplicar(int numberOne,int numberTwo,int* resultMult)
+{
+	int result=numberOne*numberTwo;
+	*resultMult=result;
+	return 0;
+}
+int utn_dividir(int numberOne,int numberTwo,int* resultDiv)
+{
+	int result=numberOne/numberTwo;
+	*resultDiv=result;
+	return 0;
+}
+
+int utn_factorizar2Numeros(int numberOne,int numberTwo,int* resultFactA,int* resultFactB)
+{
+	int resultA;
+	int resultB;
+
+	resultA=(!numberOne);
+	resultB=(!numberTwo);
+	*resultFactA=resultA;
+	*resultFactB=resultB;
+	return 0;
+}
+
