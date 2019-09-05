@@ -13,6 +13,7 @@ float utn_pideDosNumeros(float *numberOne,float *numberTwo)
 	float number2=*numberTwo;
 
 	printf("Ingrese un número: \n");
+	__fpurge(stdin);
 	scanf ("%f",&number1);
 
 	printf("Ingrese otro número: \n");
