@@ -7,6 +7,7 @@
 
 #ifndef UTN_OPERACIONES_
 #define UTN_OPERACIONES_
+float utn_pideUnNumero(float *number);
 float utn_pideDosNumeros(float *numberOne,float *numberTwo);//Recibo el puntero de dos variables donde escribiré su valor
 float utn_sumar(float numberOne,float numberTwo,float *resultSum);//Recibo 2 valores de variables y el puntero del resultado de la suma
 float utn_restar(float numberOne,float numberTwo,float *resultSub);//Recibo 2 valores de variables y el puntero del resultado de la resta

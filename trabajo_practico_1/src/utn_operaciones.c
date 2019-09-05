@@ -7,6 +7,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+float utn_pideUnNumero(float *number)
+{
+	float number1=*number;
+
+
+	printf("Ingrese un número: \n");
+	__fpurge(stdin);
+	scanf ("%f",&number1);
+
+	*number=number1;
+
+	return 0;
+}
 float utn_pideDosNumeros(float *numberOne,float *numberTwo)
 {
 	float number1=*numberOne;
