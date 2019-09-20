@@ -7,12 +7,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "utn_bibincome.h"
-#include "utn_bibcalculations.h"
 
+#include "utn_incomeStruct.h"
+#include "utn_operacionesStruct.h"
 
+#define LIMITE 1000
 int main (void){
-	Employee datos[1000];
+	Employee datos[LIMITE];
 	int opcion;
 	int end=0;
 
@@ -26,9 +27,10 @@ int main (void){
 		printf("[5] Salir \n");
 		__fpurge(stdin);
 		scanf("%d",&opcion);
+		utn_initEmployee(datos,LIMITE);
 		switch(opcion)
 		{
-		case 1: utn_uploadEmployee(datos,1000);
+		case 1: utn_addEmployee(datos,1000);
 				break;
 		case 2: utn_modifyEmployee(datos);
 				break;
