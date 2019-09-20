@@ -17,7 +17,7 @@ int i;
 	}
 	return 0;
 }
-int utn_findFreeEmployee(Employee pArray[]*aArray, int limite,int* posicion)
+int utn_findFreeEmployee(Employee pArray[], int limite,int* posicion)
 {
 int retorno=-1;
 int i;
@@ -25,11 +25,9 @@ int i;
 	{
 		for(i=0;i<limite;i++)
 		{
-			if(pArray[i].status==0)
-			{
 
 			retorno=i;
-			}
+
 		}
 	}
 return retorno;
