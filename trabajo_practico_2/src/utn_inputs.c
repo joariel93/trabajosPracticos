@@ -11,7 +11,7 @@
 #include <string.h>
 #include "utn_incomeStruct.h"
 
-int getInt(int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos)
+int utn_getInt(int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos)
 {
 	int retorno = -1;
 	int number;
