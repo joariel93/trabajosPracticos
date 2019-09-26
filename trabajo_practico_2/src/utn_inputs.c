@@ -1,12 +1,11 @@
 /*
  * utn_inputs.c
  *
- *  Created on: 19 sep. 2019
+ *  Created on: 25 sep. 2019
  *      Author: alumno
  */
-
-
 #include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include "utn_incomeStruct.h"
@@ -18,7 +17,7 @@ int utn_getInt(int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int
 	do
 	{
 		printf("%s",pMensaje);
-		fflush(stdin);
+		__fpurge(stdin);
 		if(scanf("%d",&number)==1 && number >= minimo && number <= maximo)
 		{
 			*pResultado = number;
@@ -26,7 +25,7 @@ int utn_getInt(int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int
 			break;
 		}
 		reintentos--;
-		printf("%s, le quedan %d intentos.",pMensajeError,reintentos);
+		printf("%s, le quedan %d intentos.\n",pMensajeError,reintentos);
 
 	}while(reintentos >= 0);
 	return retorno;
@@ -34,7 +33,7 @@ int utn_getInt(int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int
 int utn_getFloat(float* pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos)
 {
 	int retorno = -1;
-	int number;
+	float number;
 	do
 	{
 		printf("%s",pMensaje);
@@ -46,7 +45,7 @@ int utn_getFloat(float* pResultado,char *pMensaje,char *pMensajeError,int minimo
 			break;
 		}
 		reintentos--;
-		printf("%s, le quedan %d intentos.",pMensajeError,reintentos);
+		printf("%s, le quedan %d intentos.\n",pMensajeError,reintentos);
 
 	}while(reintentos >= 0);
 	return retorno;

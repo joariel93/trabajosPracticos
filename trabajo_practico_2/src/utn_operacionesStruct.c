@@ -1,10 +1,11 @@
 /*
- * utn_bibcalculations.c
+ * utn_operacionesStruct.c
  *
- *  Created on: 18 sep. 2019
+ *  Created on: 25 sep. 2019
  *      Author: alumno
  */
 #include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 
 #include "utn_incomeStruct.h"
@@ -43,3 +44,22 @@ int utn_salaries(Employee pArray[])
 
 	return 0;
 }
+int utn_comprobe(int pArray[],int limite,int *errorDatos)
+{
+	int i;
+	for(i=0;i<5;i++)
+			 	 	 	 	{
+			 		 	 		if(pArray[i]==0)
+			 		 	 		{
+			 		 	 		*errorDatos=1;
+			 		 	 		break;
+			 		 	 		}
+			 		 	 		else
+			 		 	 		{
+			 		 	 		*errorDatos=0;
+			 		 	 		continue;
+			 		 	 		}
+			 	 	 	 	}
+	return 0;
+}
+

@@ -1,15 +1,16 @@
 /*
- * utn_bibcalculations.h
+ * utn_operacionesStruct.h
  *
- *  Created on: 18 sep. 2019
+ *  Created on: 25 sep. 2019
  *      Author: alumno
  */
 
-#ifndef SRC_UTN_BIBCALCULATIONS_H_
-#define SRC_UTN_BIBCALCULATIONS_H_
+#ifndef UTN_OPERACIONESSTRUCT_H_
+#define UTN_OPERACIONESSTRUCT_H_
 #include "utn_incomeStruct.h"
 int utn_reportEmployee(Employee pArray[]);
 int utn_alphabetically(Employee pArray[]);
 int utn_salaries(Employee pArray[]);
+int utn_comprobe(int pArray[],int limite,int *errorDatos);
 
-#endif /* SRC_UTN_BIBCALCULATIONS_H_ */
+#endif /* UTN_OPERACIONESSTRUCT_H_ */
