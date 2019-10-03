@@ -72,7 +72,7 @@ int utn_getString (char *pResultado,char *pMensaje,char *pMensajeError,int maxim
 			}
 			for(i=0;i<strlen(text)-1;i++)
 			{
-				if(!(text[i]>='A'&&text[i]<='Z'||text[i]>='a'&&text[i]<='z'))
+				if(!((text[i]>='A'&&text[i]<='Z')||(text[i]>='a'&&text[i]<='z')))
 				{
 					printf("%s\n",pMensajeError);
 					flagError=-1;

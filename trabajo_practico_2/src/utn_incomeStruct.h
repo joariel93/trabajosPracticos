@@ -19,8 +19,8 @@ typedef struct
 int utn_initEmployee(Employee pArray[],int limite);
 int utn_findFreeEmployee(Employee pArray[],int limite,int* posicion);
 int utn_findEmployee(Employee pArray[], int limite,int* posicion,int legajo);
-int utn_addEmployee(Employee pArray[],int limite,int contador);
-int utn_modifyEmployee(Employee pArray[],int limite);
+int utn_addEmployee(Employee pArray[],int limite,int contador, int stringLimit);
+int utn_modifyEmployee(Employee pArray[],int limite, int stringLimit);
 int utn_deleteEmployee(Employee pArray[],int limite);
 
 

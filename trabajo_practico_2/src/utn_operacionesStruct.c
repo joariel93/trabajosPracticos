@@ -10,6 +10,7 @@
 #include <string.h>
 
 #include "utn_incomeStruct.h"
+#include "utn_operacionesStruct.h"
 
 int utn_reportEmployee(Employee pArray[],int limite)
 {

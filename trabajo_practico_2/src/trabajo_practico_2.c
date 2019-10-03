@@ -5,8 +5,8 @@
 #include "utn_incomeStruct.h"
 #include "utn_operacionesStruct.h"
 
-
-#define LIMITEARRAY 3
+#define LIMITESTRING 51
+#define LIMITEARRAY 1000
 int main (void){
 	Employee datos[LIMITEARRAY];
 	int contadorID=0;
@@ -27,13 +27,13 @@ int main (void){
 
 		switch(opcion)
 		{
-		case 1: utn_addEmployee(datos,LIMITEARRAY,contadorID);
+		case 1: utn_addEmployee(datos,LIMITEARRAY,contadorID,LIMITESTRING);
 				contadorID++;
 				flag=1;
 				break;
 		case 2: if(flag==1)
 				{
-				utn_modifyEmployee(datos,LIMITEARRAY);
+				utn_modifyEmployee(datos,LIMITEARRAY,LIMITESTRING);
 				}
 				else
 				{

@@ -63,9 +63,9 @@ int i;
 	printf("No se ha encontrado el número de legajo ingresado\n");
 return retorno;
 }
-int utn_addEmployee(Employee pArray[],int limite,int contador)
+int utn_addEmployee(Employee pArray[],int limite,int contador,int stringLimit)
 {
-char names[51];
+char names[stringLimit];
 int posicion;
 int retorno=-1;
 float salario;
@@ -93,11 +93,11 @@ int errorDatos=1;
 		 	 scanf("%d",&seleccion);
 		 	 switch(seleccion)
 		 	 {
-		 	 case 1:	utn_getString(names,"Ingrese el nombre: ","Error debe ingresar caracteres alfabéticos",51,51);
+		 	 case 1:	utn_getString(names,"Ingrese el nombre: ","Error debe ingresar caracteres alfabéticos",stringLimit,stringLimit);
 		 	 	 	 	strncpy(pArray[posicion].name,names,51);
 		 	 	 	 	empty[0]=1;
 	 					break;
-		 	 case 2:	utn_getString(names,"Ingrese el apellido: ","Error debe ingresar caracteres alfabéticos",51,51);
+		 	 case 2:	utn_getString(names,"Ingrese el apellido: ","Error debe ingresar caracteres alfabéticos",stringLimit,stringLimit);
 		 	 	 	 	strncpy(pArray[posicion].lastName,names,51);
 		 	 	 	 	empty[1]=1;
 	 					break;
@@ -113,7 +113,6 @@ int errorDatos=1;
 		 		 	 	if(errorDatos==1)
 	 					{
 	 					printf("Falta ingresar datos.");
-	 					printf("∖n");
 	 					}
 	 					else
 	 					{
@@ -129,9 +128,8 @@ int errorDatos=1;
 
 return retorno;
 }
-int utn_modifyEmployee(Employee pArray[],int limite)
+int utn_modifyEmployee(Employee pArray[],int limite,int stringLimit)
 {
-	int strlimit = 51;
 	int retorno = -1;
 	int volver;
 	int seleccion;
@@ -139,7 +137,7 @@ int utn_modifyEmployee(Employee pArray[],int limite)
 	int legajo;
 	int end = 0;
 	int definitiveModification = 0;
-	char newNames[strlimit];
+	char newNames[stringLimit];
 	float newSalary;
 	int newSector;
 	while (end == 0)
@@ -167,7 +165,7 @@ int utn_modifyEmployee(Employee pArray[],int limite)
 						scanf("%d", &seleccion);
 						switch (seleccion)
 						{
-							case 1:	utn_getString(newNames, "Ingrese nuevo nombre: ","Error debe ingresar caracteres alfabéticos", 51, 51);
+							case 1:	utn_getString(newNames, "Ingrese nuevo nombre: ","Error debe ingresar caracteres alfabéticos", stringLimit,stringLimit);
 									while (definitiveModification == 0)
 									{
 										printf("%s nombre de %s a %s?\n", SECURITY,pArray[posicion].name, newNames);
@@ -176,14 +174,14 @@ int utn_modifyEmployee(Employee pArray[],int limite)
 										scanf("%d", &definitiveModification);
 										switch (definitiveModification)
 										{
-											case 1:	strncpy(pArray[posicion].name, newNames, strlimit);
+											case 1:	strncpy(pArray[posicion].name, newNames, stringLimit);
 													end=1;
 													break;
 											case 2:	break;
 										}
 									}
 									break;
-							case 2:	utn_getString(newNames, "Ingrese nuevo apellido: ","Error debe ingresar caracteres alfabéticos", 51, 51);
+							case 2:	utn_getString(newNames, "Ingrese nuevo apellido: ","Error debe ingresar caracteres alfabéticos", stringLimit, stringLimit);
 									while (definitiveModification == 0)
 									{
 										printf("%s apellido de %s a %s?\n", SECURITY,pArray[posicion].lastName, newNames);
@@ -192,7 +190,7 @@ int utn_modifyEmployee(Employee pArray[],int limite)
 										scanf("%d", &definitiveModification);
 										switch (definitiveModification)
 										{
-											case 1:	strncpy(pArray[posicion].lastName, newNames,strlimit);
+											case 1:	strncpy(pArray[posicion].lastName, newNames,stringLimit);
 													end=1;
 													break;
 											case 2:	break;
