@@ -33,7 +33,6 @@ int i;
 		{
 			*posicion=i;
 			retorno=0;
-			printf("pase por aca la posicion dio %d",i);
 			break;
 		}
 
@@ -94,11 +93,11 @@ int errorDatos=1;
 		 	 scanf("%d",&seleccion);
 		 	 switch(seleccion)
 		 	 {
-		 	 case 1:	utn_getString(names,"Ingrese el nombre: ",51,51);
+		 	 case 1:	utn_getString(names,"Ingrese el nombre: ","Error debe ingresar caracteres alfabéticos",51,51);
 		 	 	 	 	strncpy(pArray[posicion].name,names,51);
 		 	 	 	 	empty[0]=1;
 	 					break;
-		 	 case 2:	utn_getString(names,"Ingrese el apellido: ",51,51);
+		 	 case 2:	utn_getString(names,"Ingrese el apellido: ","Error debe ingresar caracteres alfabéticos",51,51);
 		 	 	 	 	strncpy(pArray[posicion].lastName,names,51);
 		 	 	 	 	empty[1]=1;
 	 					break;
@@ -113,16 +112,14 @@ int errorDatos=1;
 		 	 default:	utn_comprobe(empty,4,&errorDatos);
 		 		 	 	if(errorDatos==1)
 	 					{
-	 					printf("Falta ingresar datos.∖n");
+	 					printf("Falta ingresar datos.");
+	 					printf("∖n");
 	 					}
 	 					else
 	 					{
 	 					pArray[posicion].isEmpty=1;
 	 					pArray[posicion].id=contador;
 	 					retorno=0;
-	 					printf("El legajo es %d ",pArray[posicion].id);
-	 					printf("%s	%s	%.2f	%d",pArray[posicion].name,pArray[posicion].lastName,pArray[posicion].salary,pArray[posicion].sector);
-
 	 					return retorno;
 	 					}
 		 	 }
@@ -170,7 +167,7 @@ int utn_modifyEmployee(Employee pArray[],int limite)
 						scanf("%d", &seleccion);
 						switch (seleccion)
 						{
-							case 1:	utn_getString(newNames, "Ingrese nuevo nombre: ", 51, 51);
+							case 1:	utn_getString(newNames, "Ingrese nuevo nombre: ","Error debe ingresar caracteres alfabéticos", 51, 51);
 									while (definitiveModification == 0)
 									{
 										printf("%s nombre de %s a %s?\n", SECURITY,pArray[posicion].name, newNames);
@@ -186,7 +183,7 @@ int utn_modifyEmployee(Employee pArray[],int limite)
 										}
 									}
 									break;
-							case 2:	utn_getString(newNames, "Ingrese nuevo apellido: ", 51, 51);
+							case 2:	utn_getString(newNames, "Ingrese nuevo apellido: ","Error debe ingresar caracteres alfabéticos", 51, 51);
 									while (definitiveModification == 0)
 									{
 										printf("%s apellido de %s a %s?\n", SECURITY,pArray[posicion].lastName, newNames);

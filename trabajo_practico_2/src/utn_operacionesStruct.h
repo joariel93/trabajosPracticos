@@ -8,8 +8,7 @@
 #ifndef UTN_OPERACIONESSTRUCT_H_
 #define UTN_OPERACIONESSTRUCT_H_
 int utn_reportEmployee(Employee pArray[],int limite);
-int utn_ascend(Employee pArray[],int limite);
-int utn_descend(Employee pArray[],int limite);
+int utn_choice(Employee pArray[],int limite,int choice);
 int utn_comprobe(int pArray[],int limite,int *errorDatos);
 
 

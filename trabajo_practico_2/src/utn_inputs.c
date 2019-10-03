@@ -50,12 +50,17 @@ int utn_getFloat(float* pResultado,char *pMensaje,char *pMensajeError,int minimo
 	}while(reintentos >= 0);
 	return retorno;
 }
-int utn_getString (char *pResultado,char *pMensaje,int maximo,int limite)
+int utn_getString (char *pResultado,char *pMensaje,char *pMensajeError,int maximo,int limite)
 {
+	int flagError=-1;
+	int i;
 	int retorno = -1;
 	char text[limite];
 	if(	pResultado != NULL && pMensaje	!= NULL &&	0< maximo)
 	{
+		while(flagError==-1)
+		{
+			flagError=0;
 			printf("%s",pMensaje);
 			__fpurge(stdin);
 			fgets(text,sizeof(text),stdin);
@@ -65,7 +70,16 @@ int utn_getString (char *pResultado,char *pMensaje,int maximo,int limite)
 				strncpy(pResultado,text,maximo+1);
 				retorno = 0;
 			}
-
+			for(i=0;i<strlen(text)-1;i++)
+			{
+				if(!(text[i]>='A'&&text[i]<='Z'||text[i]>='a'&&text[i]<='z'))
+				{
+					printf("%s\n",pMensajeError);
+					flagError=-1;
+					break;
+				}
+			}
+		}
 
 	}
 	return retorno;

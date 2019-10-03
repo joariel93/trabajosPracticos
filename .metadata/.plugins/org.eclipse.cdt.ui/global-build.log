@@ -1,19 +1,26 @@
-22:07:20 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+20:41:34 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
 make all 
+Building file: ../src/utn_incomeStruct.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_incomeStruct.d" -MT"src/utn_incomeStruct.o" -o "src/utn_incomeStruct.o" "../src/utn_incomeStruct.c"
+Finished building: ../src/utn_incomeStruct.c
+ 
+Building file: ../src/utn_inputs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_inputs.d" -MT"src/utn_inputs.o" -o "src/utn_inputs.o" "../src/utn_inputs.c"
+../src/utn_inputs.c: In function ‘utn_getString’:
+../src/utn_inputs.c:75:36: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+     if(!(text[i]>='A'||text[i]<='Z'&&text[i]>='a'||text[i]<='z'))
+                        ~~~~~~~~~~~~^~~~~~~~~~~~~~
+Finished building: ../src/utn_inputs.c
+ 
 Building file: ../src/utn_operacionesStruct.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_operacionesStruct.d" -MT"src/utn_operacionesStruct.o" -o "src/utn_operacionesStruct.o" "../src/utn_operacionesStruct.c"
 ../src/utn_operacionesStruct.c: In function ‘utn_reportEmployee’:
-../src/utn_operacionesStruct.c:27:14: warning: implicit declaration of function ‘utn_alphabetically’ [-Wimplicit-function-declaration]
-      case 1: utn_alphabetically(pArray);
-              ^~~~~~~~~~~~~~~~~~
-../src/utn_operacionesStruct.c: In function ‘utn_alphabetically’:
-../src/utn_operacionesStruct.c:49:15: warning: implicit declaration of function ‘utn_ascend’ [-Wimplicit-function-declaration]
-       case 1: utn_ascend(pArray,limite);
-               ^~~~~~~~~~
-../src/utn_operacionesStruct.c:51:15: warning: implicit declaration of function ‘utn_descend’ [-Wimplicit-function-declaration]
-       case 2: utn_descend(pArray,limite);
-               ^~~~~~~~~~~
+../src/utn_operacionesStruct.c:28:16: warning: implicit declaration of function ‘utn_order’ [-Wimplicit-function-declaration]
+        case 1: utn_order(pArray,limite,choice);
+                ^~~~~~~~~
 Finished building: ../src/utn_operacionesStruct.c
  
 Building target: trabajo_practico_2
@@ -21,3 +28,90 @@ Invoking: GCC C Linker
 gcc  -o "trabajo_practico_2"  ./src/trabajo_practico_2.o ./src/utn_incomeStruct.o ./src/utn_inputs.o ./src/utn_operacionesStruct.o   
 Finished building target: trabajo_practico_2
  
+20:41:37 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+make: No se hace nada para 'all'.
+20:42:34 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+Building file: ../src/utn_inputs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_inputs.d" -MT"src/utn_inputs.o" -o "src/utn_inputs.o" "../src/utn_inputs.c"
+../src/utn_inputs.c: In function ‘utn_getString’:
+../src/utn_inputs.c:75:20: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+     if(text[i]>='A'&&text[i]<='Z'||text[i]>='a'&&text[i]<='z')
+        ~~~~~~~~~~~~^~~~~~~~~~~~~~
+Finished building: ../src/utn_inputs.c
+ 
+Building target: trabajo_practico_2
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_2"  ./src/trabajo_practico_2.o ./src/utn_incomeStruct.o ./src/utn_inputs.o ./src/utn_operacionesStruct.o   
+Finished building target: trabajo_practico_2
+ 
+20:42:42 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+Building file: ../src/utn_inputs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_inputs.d" -MT"src/utn_inputs.o" -o "src/utn_inputs.o" "../src/utn_inputs.c"
+../src/utn_inputs.c: In function ‘utn_getString’:
+../src/utn_inputs.c:75:22: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+     if(!(text[i]>='A'&&text[i]<='Z'||text[i]>='a'&&text[i]<='z'))
+          ~~~~~~~~~~~~^~~~~~~~~~~~~~
+Finished building: ../src/utn_inputs.c
+ 
+Building target: trabajo_practico_2
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_2"  ./src/trabajo_practico_2.o ./src/utn_incomeStruct.o ./src/utn_inputs.o ./src/utn_operacionesStruct.o   
+Finished building target: trabajo_practico_2
+ 
+20:42:43 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+make: No se hace nada para 'all'.
+20:43:45 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+Building file: ../src/utn_inputs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_inputs.d" -MT"src/utn_inputs.o" -o "src/utn_inputs.o" "../src/utn_inputs.c"
+../src/utn_inputs.c: In function ‘utn_getString’:
+../src/utn_inputs.c:75:22: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+     if(!(text[i]>='A'&&text[i]<='Z'||text[i]>='a'&&text[i]<='z'))
+          ~~~~~~~~~~~~^~~~~~~~~~~~~~
+Finished building: ../src/utn_inputs.c
+ 
+Building target: trabajo_practico_2
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_2"  ./src/trabajo_practico_2.o ./src/utn_incomeStruct.o ./src/utn_inputs.o ./src/utn_operacionesStruct.o   
+Finished building target: trabajo_practico_2
+ 
+20:43:46 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+make: No se hace nada para 'all'.
+20:44:34 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+Building file: ../src/utn_incomeStruct.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_incomeStruct.d" -MT"src/utn_incomeStruct.o" -o "src/utn_incomeStruct.o" "../src/utn_incomeStruct.c"
+Finished building: ../src/utn_incomeStruct.c
+ 
+Building target: trabajo_practico_2
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_2"  ./src/trabajo_practico_2.o ./src/utn_incomeStruct.o ./src/utn_inputs.o ./src/utn_operacionesStruct.o   
+Finished building target: trabajo_practico_2
+ 
+20:44:35 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+make: No se hace nada para 'all'.
+20:45:12 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+Building file: ../src/utn_incomeStruct.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_incomeStruct.d" -MT"src/utn_incomeStruct.o" -o "src/utn_incomeStruct.o" "../src/utn_incomeStruct.c"
+Finished building: ../src/utn_incomeStruct.c
+ 
+Building target: trabajo_practico_2
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_2"  ./src/trabajo_practico_2.o ./src/utn_incomeStruct.o ./src/utn_inputs.o ./src/utn_operacionesStruct.o   
+Finished building target: trabajo_practico_2
+ 
+20:45:14 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+make all 
+make: No se hace nada para 'all'.
