@@ -1,7 +1,7 @@
 /*
  * utn_inputs.c
  *
- *  Created on: 2 oct. 2019
+ *  Created on: 25 sep. 2019
  *      Author: alumno
  */
 #include <stdio.h>
@@ -70,4 +70,5 @@ int utn_getString (char *pResultado,char *pMensaje,int maximo,int limite)
 	}
 	return retorno;
 }
+
 

@@ -1,7 +1,7 @@
 /*
  * utn_operacionesStruct.c
  *
- *  Created on: 25 sep. 2019
+ *  Created on: 2 oct. 2019
  *      Author: alumno
  */
 #include <stdio.h>
@@ -9,37 +9,44 @@
 #include <stdlib.h>
 
 #include "utn_incomeStruct.h"
-int utn_alphabetically(Employee pArray[]);
-int utn_salaries(Employee pArray[]);
-int utn_reportEmployee(Employee pArray[])
-{int end=0;
-int choice;
-	while(end==0)
-		{
-			printf("Que desea hacer? \n");
-			printf("[1] Ordenar alfabéticamente \n");
-			printf("[2] Ordenar por salario \n");
-			printf("[3] Volver \n");
-			__fpurge(stdin);
-			scanf("%d",&choice);
-			switch(choice)
-					{
-					case 1: utn_alphabetically(pArray);
-							break;
-					case 2: utn_salaries(pArray);
-							break;
-					default:end=1;
-							break;
-					}
-		}
-return 0;
-}
-int utn_alphabetically(Employee pArray[])
+
+int utn_reportEmployee(Employee pArray[],int limite)
 {
+	int end=0;
+		int choice;
+			while(end==0)
+				{
+					printf("Como desea ordenar? \n");
+					printf("[1] Ascendente\n");
+					printf("[2] Descendente\n");
+					printf("[3] Volver \n");
+					__fpurge(stdin);
+					scanf("%d",&choice);
+					switch(choice)
+							{
+							case 1: utn_ascend(pArray,limite);
+									break;
+							case 2: utn_descend(pArray,limite);
+									break;
+							default:end=1;
+									break;
+							}
+				}
+		return 0;
+}
+
+int utn_ascend(Employee pArray[],int limite)
+{
+int flagChange=-1;
+int i;
+while(flagChange==-1)
+{
+	if(pArray[])
+}
 
 	return 0;
 }
-int utn_salaries(Employee pArray[])
+int utn_descend(Employee pArray[],int limite)
 {
 
 	return 0;
@@ -47,7 +54,7 @@ int utn_salaries(Employee pArray[])
 int utn_comprobe(int pArray[],int limite,int *errorDatos)
 {
 	int i;
-	for(i=0;i<5;i++)
+	for(i=0;i<limite;i++)
 			 	 	 	 	{
 			 		 	 		if(pArray[i]==0)
 			 		 	 		{

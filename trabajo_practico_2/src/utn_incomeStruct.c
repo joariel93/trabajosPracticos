@@ -1,7 +1,7 @@
 /*
  * utn_incomeStruct.c
  *
- *  Created on: 25 sep. 2019
+ *  Created on: 2 oct. 2019
  *      Author: alumno
  */
 #include <stdio.h>
@@ -11,6 +11,7 @@
 #include "utn_incomeStruct.h"
 #include "utn_inputs.h"
 #include "utn_operacionesStruct.h"
+#define SECURITY "Esta seguro de querer modificar el"
 int utn_initEmployee(Employee pArray[],int limite)
 {
 int i;
@@ -32,6 +33,7 @@ int i;
 		{
 			*posicion=i;
 			retorno=0;
+			printf("pase por aca la posicion dio %d",i);
 			break;
 		}
 
@@ -47,12 +49,13 @@ int retorno=-1;
 int i;
 	for(i=0;i<limite;i++)
 	{
-		if(pArray!=NULL && limite>0	&&	posicion!=NULL &&	legajo>0)
+		if(pArray!=NULL && limite>0	&&	posicion!=NULL &&	legajo>=0)
 		{
-			if(pArray[i].legajo==legajo)
+			if(pArray[i].id==legajo)
 			{
 				*posicion=i;
 				retorno=0;
+				return retorno;
 				break;
 			}
 
@@ -61,20 +64,19 @@ int i;
 	printf("No se ha encontrado el número de legajo ingresado\n");
 return retorno;
 }
-int utn_addEmployee(Employee pArray[],int limite)
+int utn_addEmployee(Employee pArray[],int limite,int contador)
 {
-int contadorID=0;
+char names[51];
 int posicion;
 int retorno=-1;
 float salario;
-int legajo;
 int sector;
-int empty[5]={0,0,0,0,0};
+int empty[4]={0,0,0,0};
 int seleccion;
 int end=0;
 int errorDatos=1;
 
- if(pArray!=NULL&&limite>0&&contadorID>0)
+ if(pArray!=NULL&&limite>0&&contador>=0)
  {
 	 if(utn_findFreeEmployee(pArray,limite,&posicion)==-1)
 	 {
@@ -83,46 +85,44 @@ int errorDatos=1;
 	 else
 	 {	while(end==0)
 	 	 {	 printf("Pantalla de ingreso de datos:\n");
-		 	 printf("[1] N° de legajo\n");
-		 	 printf("[2] Nombre\n");
-		 	 printf("[3] Apellido\n");
-		 	 printf("[4] Salario\n");
-		 	 printf("[5] Sector\n");
-		 	 printf("[6] Volver\n");
+		 	 printf("[1] Nombre\n");
+		 	 printf("[2] Apellido\n");
+		 	 printf("[3] Salario\n");
+		 	 printf("[4] Sector\n");
+		 	 printf("[5] Volver\n");
 		 	 __fpurge(stdin);
 		 	 scanf("%d",&seleccion);
 		 	 switch(seleccion)
 		 	 {
-		 	 case 1:	utn_getInt(&legajo,"Ingrese el numero de legajo\n","Error el numero de legajo ingresado ya está usado o no es válido",0,10000,5);
-		 	 	 	 	pArray[posicion].legajo=legajo;
-		 	 	 	 	pArray[posicion].id=contadorID;
+		 	 case 1:	utn_getString(names,"Ingrese el nombre: ",51,51);
+		 	 	 	 	strncpy(pArray[posicion].name,names,51);
 		 	 	 	 	empty[0]=1;
-	 	 	 	 		break;
-		 	 case 2:	utn_getString(pArray[posicion].name,"Ingrese el nombre: ",51,51);
-		 	 	 	 	pArray[posicion].id=contadorID;
-	 					empty[1]=1;
 	 					break;
-		 	 case 3:	utn_getString(pArray[posicion].lastName,"Ingrese el apellido: ",51,51);
-		 	 	 	 	pArray[posicion].id=contadorID;
+		 	 case 2:	utn_getString(names,"Ingrese el apellido: ",51,51);
+		 	 	 	 	strncpy(pArray[posicion].lastName,names,51);
+		 	 	 	 	empty[1]=1;
+	 					break;
+		 	 case 3:	utn_getFloat(&salario,"Ingrese el salario: ","Error debe ingresar un número válido",1,1000000,5);
+		 	 	 	 	pArray[posicion].salary=salario;
 		 	 	 	 	empty[2]=1;
 	 					break;
-		 	 case 4:	pArray[posicion].salary=utn_getFloat(&salario,"Ingrese el salario: ","Error debe ingresar un número válido",1,1000000,5);
-		 	 	 	 	pArray[posicion].id=contadorID;
+		 	 case 4:	utn_getInt(&sector,"Ingrese el código de sector ","Error debe ingresar un código válido",1,10,5);
+		 	 	 	 	pArray[posicion].sector=sector;
 		 	 	 	 	empty[3]=1;
 	 					break;
-		 	 case 5:	pArray[posicion].sector=utn_getInt(&sector,"Ingrese el código de sector ","Error debe ingresar un código válido",1,10,5);
-		 	 	 	 	pArray[posicion].id=contadorID;
-		 	 	 	 	empty[4]=1;
-	 					break;
-		 	 default:	utn_comprobe(empty,5,&errorDatos);
+		 	 default:	utn_comprobe(empty,4,&errorDatos);
 		 		 	 	if(errorDatos==1)
 	 					{
-	 					printf("Falta ingresar datos∖n");
+	 					printf("Falta ingresar datos.∖n");
 	 					}
 	 					else
 	 					{
-	 					contadorID++;
+	 					pArray[posicion].isEmpty=1;
+	 					pArray[posicion].id=contador;
 	 					retorno=0;
+	 					printf("El legajo es %d ",pArray[posicion].id);
+	 					printf("%s	%s	%.2f	%d",pArray[posicion].name,pArray[posicion].lastName,pArray[posicion].salary,pArray[posicion].sector);
+
 	 					return retorno;
 	 					}
 		 	 }
@@ -134,74 +134,168 @@ return retorno;
 }
 int utn_modifyEmployee(Employee pArray[],int limite)
 {
-int retorno=-1;
-int volver;
-int seleccion;
-int posicion;
-int legajo;
-int end=0;
-
-int sinIngresos=0;
-float newSalary;
-int newSector;
-int i;
-while(end==0)
+	int strlimit = 51;
+	int retorno = -1;
+	int volver;
+	int seleccion;
+	int posicion;
+	int legajo;
+	int end = 0;
+	int definitiveModification = 0;
+	char newNames[strlimit];
+	float newSalary;
+	int newSector;
+	while (end == 0)
 	{
 		printf("[1] Ingresar legajo a modificar\n");
 		printf("[2] Volver\n");
 		__fpurge(stdin);
-		scanf("%d",&volver);
-		switch(volver)
-			{
-				case 2: break;
-				default:printf("Ingrese el numero de legajo del empleado que desea ingresar: ");
+		scanf("%d", &volver);
+		switch (volver)
+		{
+			case 2:	return 0;
+					break;
+			default:printf("Ingrese el numero de legajo del empleado que desea modificar: ");
+					__fpurge(stdin);
+					scanf("%d", &legajo);
+					if (utn_findEmployee(pArray, limite, &posicion, legajo) == 0)
+					{
+						printf("Que desea modificar a %s %s:\n", pArray[posicion].name,pArray[posicion].lastName);
+						printf("[1] Nombre\n");
+						printf("[2] Apellido\n");
+						printf("[3] Salario\n");
+						printf("[4] Sector\n");
+						printf("[5] Volver\n");
 						__fpurge(stdin);
-						scanf("%d",&legajo);
-						if(utn_findEmployee(pArray,limite,&posicion,legajo)==0)
+						scanf("%d", &seleccion);
+						switch (seleccion)
 						{
-							printf("Que desea modificar a %s %s:\n",pArray[posicion].name,pArray[posicion].lastName);
-							printf("[1] Nombre\n");
-							printf("[2] Apellido\n");
-							printf("[3] Salario\n");
-							printf("[4] Sector\n");
-							printf("[5] Volver\n");
-							__fpurge(stdin);
-							scanf("%d",&seleccion);
-							switch(seleccion)
-							{
-							case 1:		utn_getString(pArray[posicion].name,"Ingrese nuevo nombre: ",51,51);
-										break;
-							case 2:		utn_getString(pArray[posicion].lastName,"Ingrese nuevo apellido: ",51,51);
-										break;
-							case 3:		utn_getFloat(&newSalary,"Ingrese nuevo salario: ","Error debe ingresar un número válido.",1,1000000,5);
-										pArray[posicion].salary=newSalary;
-										break;
-							case 4:		utn_getInt(&newSector,"Ingrese nuevo código de sector: ","Debe ingresar un código de sector válido",1,10,5);
-										pArray[posicion].sector=newSector;
-										break;
-							default:	break;
-							}
+							case 1:	utn_getString(newNames, "Ingrese nuevo nombre: ", 51, 51);
+									while (definitiveModification == 0)
+									{
+										printf("%s nombre de %s a %s?\n", SECURITY,pArray[posicion].name, newNames);
+										printf("[1] Si\n[2] No\n");
+										__fpurge(stdin);
+										scanf("%d", &definitiveModification);
+										switch (definitiveModification)
+										{
+											case 1:	strncpy(pArray[posicion].name, newNames, strlimit);
+													end=1;
+													break;
+											case 2:	break;
+										}
+									}
+									break;
+							case 2:	utn_getString(newNames, "Ingrese nuevo apellido: ", 51, 51);
+									while (definitiveModification == 0)
+									{
+										printf("%s apellido de %s a %s?\n", SECURITY,pArray[posicion].lastName, newNames);
+										printf("[1] Si\n[2] No\n");
+										__fpurge(stdin);
+										scanf("%d", &definitiveModification);
+										switch (definitiveModification)
+										{
+											case 1:	strncpy(pArray[posicion].lastName, newNames,strlimit);
+													end=1;
+													break;
+											case 2:	break;
+										}
+									}
+									break;
+							case 3:	utn_getFloat(&newSalary, "Ingrese nuevo salario: ","Error debe ingresar un número válido.", 1, 1000000,5);
+									while (definitiveModification == 0)
+									{
+										printf("%s salario de %.2f a %.2f?\n", SECURITY,pArray[posicion].salary, newSalary);
+										printf("[1] Si\n[2] No\n");
+										__fpurge(stdin);
+										scanf("%d", &definitiveModification);
+										switch (definitiveModification)
+										{
+											case 1:	pArray[posicion].salary = newSalary;
+													end=1;
+													break;
+											case 2:	break;
+										}
+									}
+									break;
+							case 4:	utn_getInt(&newSector, "Ingrese nuevo código de sector: ","Debe ingresar un código de sector válido", 1, 10,5);
+									while (definitiveModification == 0)
+									{
+										printf("%s sector de %d a %d?\n", SECURITY,pArray[posicion].sector, newSector);
+										printf("[1] Si\n[2] No\n");
+										__fpurge(stdin);
+										scanf("%d", &definitiveModification);
+										switch (definitiveModification)
+										{
+											case 1:	pArray[posicion].sector = newSector;
+													end=1;
+													break;
+											case 2:	break;
+										}
+									}
+							default:break;
 						}
-				}
+					}
+					break;
+			}
 
-			retorno=0;
-			return retorno;
+		}
 
+	retorno = 0;
+	return retorno;
+
+}
+
+int utn_deleteEmployee(Employee pArray[],int limite)
+{
+int end=0;
+int legajo;
+int volver;
+int delete=0;
+int seleccion;
+int definitiveModification=0;
+int posicion;
+while (end == 0)
+	{
+		printf("[1] Ingresar legajo a eliminar\n");
+		printf("[2] Volver\n");
+		__fpurge(stdin);
+		scanf("%d", &volver);
+		switch (volver)
+		{
+			case 2:	return 0;
+					break;
+			default:printf("Ingrese el numero de legajo del empleado que desea eliminar: ");
+					__fpurge(stdin);
+					scanf("%d", &legajo);
+					if (utn_findEmployee(pArray, limite, &posicion, legajo) == 0)
+					{
+						printf("Desea eliminar a %s %s\n",pArray[posicion].name,pArray[posicion].lastName);
+						printf("[1] Si\n[2] No\n");
+						__fpurge(stdin);
+						scanf("%d", &seleccion);
+						switch (seleccion)
+						{
+							case 1:	while (definitiveModification == 0)
+									{
+										printf("Confirme su decision\n");
+										printf("[1] Si\n[2] No\n");
+										__fpurge(stdin);
+										scanf("%d", &definitiveModification);
+										switch (definitiveModification)
+										{
+											case 1:	pArray[posicion].isEmpty = delete;
+
+													end=1;
+													break;
+											case 2:	break;
+										}
+									}
+						}
+					}
+		}
 	}
 
 return 0;
 }
-int utn_deleteEmployee(Employee pArray[],int limite)
-{
-int end=0;
-int sinIngresos=0;
-int i;
-while(end==0)
-{
-
-}
-
-return 0;
-}
-
 

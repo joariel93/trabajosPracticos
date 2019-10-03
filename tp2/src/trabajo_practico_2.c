@@ -1,19 +1,24 @@
+/*
+ * trabajoPractico2.c
+ *
+ *  Created on: 18 sep. 2019
+ *      Author: alumno
+ */
 #include <stdio.h>
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "utn_incomeStruct.h"
 #include "utn_operacionesStruct.h"
 
-
-#define LIMITEARRAY 3
+#define LIMITE 3
 int main (void){
-	Employee datos[LIMITEARRAY];
-	int contadorID=0;
+	Employee datos[LIMITE];
 	int opcion;
 	int flag=0;
 	int end=0;
-	utn_initEmployee(datos,LIMITEARRAY);
+	utn_initEmployee(datos,LIMITE);
 	while(end==0)
 	{
 		printf("Bienvenido, que desea hacer? \n");
@@ -27,13 +32,12 @@ int main (void){
 
 		switch(opcion)
 		{
-		case 1: utn_addEmployee(datos,LIMITEARRAY,contadorID);
-				contadorID++;
+		case 1: utn_addEmployee(datos,LIMITE);
 				flag=1;
 				break;
 		case 2: if(flag==1)
 				{
-				utn_modifyEmployee(datos,LIMITEARRAY);
+				utn_modifyEmployee(datos,LIMITE);
 				}
 				else
 				{
@@ -42,7 +46,7 @@ int main (void){
 				break;
 		case 3: if(flag==1)
 				{
-				utn_deleteEmployee(datos,LIMITEARRAY);
+				utn_deleteEmployee(datos,LIMITE);
 				}
 				else
 				{
@@ -51,7 +55,7 @@ int main (void){
 				break;
 		case 4: if(flag==1)
 				{
-				utn_reportEmployee(datos,LIMITEARRAY);
+				utn_reportEmployee(datos);
 				}
 				else
 				{
@@ -65,3 +69,4 @@ int main (void){
 	}
 	return 0;
 }
+
