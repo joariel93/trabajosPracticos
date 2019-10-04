@@ -5,21 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/trabajo_practico_2.c \
-../src/utn_incomeStruct.c \
-../src/utn_inputs.c \
-../src/utn_operacionesStruct.c 
+../src/utn_arrayEmployees.c \
+../src/utn_inputs.c 
 
 OBJS += \
 ./src/trabajo_practico_2.o \
-./src/utn_incomeStruct.o \
-./src/utn_inputs.o \
-./src/utn_operacionesStruct.o 
+./src/utn_arrayEmployees.o \
+./src/utn_inputs.o 
 
 C_DEPS += \
 ./src/trabajo_practico_2.d \
-./src/utn_incomeStruct.d \
-./src/utn_inputs.d \
-./src/utn_operacionesStruct.d 
+./src/utn_arrayEmployees.d \
+./src/utn_inputs.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

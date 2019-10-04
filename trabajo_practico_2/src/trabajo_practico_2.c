@@ -2,8 +2,9 @@
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
-#include "utn_incomeStruct.h"
-#include "utn_operacionesStruct.h"
+
+#include "utn_arrayEmployees.h"
+
 
 #define LIMITESTRING 51
 #define LIMITEARRAY 1000
@@ -13,7 +14,7 @@ int main (void){
 	int opcion;
 	int flag=0;
 	int end=0;
-	utn_initEmployee(datos,LIMITEARRAY);
+	utn_initEmployees(datos,LIMITEARRAY);
 	while(end==0)
 	{
 		printf("Bienvenido, que desea hacer? \n");
@@ -42,7 +43,7 @@ int main (void){
 				break;
 		case 3: if(flag==1)
 				{
-				utn_deleteEmployee(datos,LIMITEARRAY);
+				utn_removeEmployee(datos,LIMITEARRAY);
 				}
 				else
 				{

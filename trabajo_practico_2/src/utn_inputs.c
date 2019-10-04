@@ -8,7 +8,8 @@
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
-#include "utn_incomeStruct.h"
+
+#include "utn_arrayEmployees.h"
 
 int utn_getInt(int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos)
 {

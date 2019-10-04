@@ -4,15 +4,16 @@
  *  Created on: 2 oct. 2019
  *      Author: alumno
  */
+#include "utn_arrayEmployees.h"
+
 #include <stdio.h>
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
-#include "utn_incomeStruct.h"
 #include "utn_inputs.h"
-#include "utn_operacionesStruct.h"
+
 #define SECURITY "Esta seguro de querer modificar el"
-int utn_initEmployee(Employee pArray[],int limite)
+int utn_initEmployees(Employee pArray[],int limite)
 {
 int i;
 	for(i=0;i<limite;i++)
@@ -42,7 +43,7 @@ int i;
 	}
 return retorno;
 }
-int utn_findEmployee(Employee pArray[], int limite,int* posicion,int legajo)
+int utn_findEmployeeById(Employee pArray[], int limite,int* posicion,int legajo)
 {
 int retorno=-1;
 int i;
@@ -153,7 +154,7 @@ int utn_modifyEmployee(Employee pArray[],int limite,int stringLimit)
 			default:printf("Ingrese el numero de legajo del empleado que desea modificar: ");
 					__fpurge(stdin);
 					scanf("%d", &legajo);
-					if (utn_findEmployee(pArray, limite, &posicion, legajo) == 0)
+					if (utn_findEmployeeById(pArray, limite, &posicion, legajo) == 0)
 					{
 						printf("Que desea modificar a %s %s:\n", pArray[posicion].name,pArray[posicion].lastName);
 						printf("[1] Nombre\n");
@@ -240,8 +241,7 @@ int utn_modifyEmployee(Employee pArray[],int limite,int stringLimit)
 	return retorno;
 
 }
-
-int utn_deleteEmployee(Employee pArray[],int limite)
+int utn_removeEmployee(Employee pArray[],int limite)
 {
 int end=0;
 int legajo;
@@ -263,7 +263,7 @@ while (end == 0)
 			default:printf("Ingrese el numero de legajo del empleado que desea eliminar: ");
 					__fpurge(stdin);
 					scanf("%d", &legajo);
-					if (utn_findEmployee(pArray, limite, &posicion, legajo) == 0)
+					if (utn_findEmployeeById(pArray, limite, &posicion, legajo) == 0)
 					{
 						printf("Desea eliminar a %s %s\n",pArray[posicion].name,pArray[posicion].lastName);
 						printf("[1] Si\n[2] No\n");
@@ -292,5 +292,154 @@ while (end == 0)
 	}
 
 return 0;
+}
+int utn_reportEmployee(Employee pArray[],int limite)
+{
+	int end=0;
+		int choice;
+			while(end==0)
+				{
+					printf("Como desea ordenar? \n");
+					printf("[1] Ascendente\n");
+					printf("[2] Descendente\n");
+					printf("[3] Volver \n");
+					__fpurge(stdin);
+					scanf("%d",&choice);
+					switch(choice)
+							{
+							case 1: utn_sortEmployees(pArray,limite,choice);
+									break;
+							case 2: utn_sortEmployees(pArray,limite,choice);
+									break;
+							default:end=1;
+									break;
+							}
+				}
+		return 0;
+}
+int utn_sortEmployees(Employee pArray[],int limite,int choice)
+{
+int flagPasada=-1;
+int i;
+Employee aux;
+
+while(flagPasada==-1)
+{
+	flagPasada=0;
+	for(i=0;i<limite;i++)
+	{
+		if(pArray[i].isEmpty!=0&&pArray[i+1].isEmpty!=0&&(i+1)<=limite)
+		{
+			if(choice==1)
+			{
+				if(strcmp(pArray[i].lastName,pArray[i+1].lastName)==0)
+				{
+					if(pArray[i].sector>pArray[i+1].sector)
+					{
+						aux=pArray[i];
+						pArray[i]=pArray[i+1];
+						pArray[i+1]=aux;
+						flagPasada=-1;
+					}
+
+				}else if(strcmp(pArray[i].lastName,pArray[i+1].lastName)>0&&(i+1)<=limite)
+				{
+					aux=pArray[i];
+					pArray[i]=pArray[i+1];
+					pArray[i+1]=aux;
+					flagPasada=-1;
+				}
+
+			}else
+			{
+				if(strcmp(pArray[i].lastName,pArray[i+1].lastName)==0&&i+1<=limite)
+								{
+									if(pArray[i].sector<pArray[i+1].sector)
+									{
+										aux=pArray[i];
+										pArray[i]=pArray[i+1];
+										pArray[i+1]=aux;
+										flagPasada=-1;
+									}
+
+								}else if(strcmp(pArray[i].lastName,pArray[i+1].lastName)<0&&i+1<=limite)
+								{
+									aux=pArray[i];
+									pArray[i]=pArray[i+1];
+									pArray[i+1]=aux;
+									flagPasada=-1;
+								}
+			}
+		}else if(pArray[i].isEmpty==0&&pArray[i+1].isEmpty!=0&&i+1<=limite)
+		{
+			aux=pArray[i];
+			pArray[i]=pArray[i+1];
+			pArray[i+1]=aux;
+			flagPasada=-1;
+		}else if(pArray[i].isEmpty==0&&pArray[i+1].isEmpty==0&&i+1<=limite)
+		{
+			continue;
+		}
+	}
+}
+utn_printEmployees(pArray,limite);
+	return 0;
+}
+int utn_comprobe(int pArray[],int limite,int *errorDatos)
+{
+	int i;
+	for(i=0;i<limite;i++)
+			 	 	 	 	{
+			 		 	 		if(pArray[i]==0)
+			 		 	 		{
+			 		 	 		*errorDatos=1;
+			 		 	 		break;
+			 		 	 		}
+			 		 	 		else
+			 		 	 		{
+			 		 	 		*errorDatos=0;
+			 		 	 		continue;
+			 		 	 		}
+			 	 	 	 	}
+	return 0;
+}
+int utn_printEmployees(Employee pArray[],int limite)
+{
+	float sumSalaryes=0;
+	float promSalaryes=0;
+	int cantEmployees=0;
+	int cantHighSalaryes=0;
+	int j;
+	printf("Legajo\tApellido Nombre\tSalario\tSector\n");
+	for(j=0;j<limite;j++)
+	{
+			if(pArray[j].isEmpty==1)
+			{
+				printf("%d\t%s\t%s\t%.2f\t%d\n",pArray[j].id,pArray[j].lastName,pArray[j].name,pArray[j].salary,pArray[j].sector);
+			}else if(pArray[j].isEmpty==0)
+			{
+				continue;
+			}
+	}
+
+	printf("\nSalarios:\nTotal	Promedio	Cantidad de empleados que superan promedio\n");
+	for(j=0;j<limite;j++)
+	{
+		if(pArray[j].isEmpty==1)
+		{
+			cantEmployees++;
+			sumSalaryes=sumSalaryes+pArray[j].salary;
+		}
+	}
+	promSalaryes=sumSalaryes/(float)cantEmployees;
+	for(j=0;j<limite;j++)
+	{
+		if(pArray[j].salary>promSalaryes)
+		{
+			cantHighSalaryes++;
+		}
+	}
+	printf("%.2f	%.2f	%20d\n",sumSalaryes,promSalaryes,cantHighSalaryes);
+	return 0;
 }
 
