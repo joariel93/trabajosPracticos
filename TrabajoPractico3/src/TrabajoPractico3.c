@@ -4,6 +4,7 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#include "Extras.h"
 
 /****************************************************
     Menu:
@@ -44,24 +45,22 @@ int main()
 
 int main()
 {
-int option = 0;
+int option;
 LinkedList* listaEmpleados = ll_newLinkedList();
     //Employee** lista = (Employee**) malloc(sizeof(Employee*));
     //Employee** pAuxEmpleado;
 int cont = 0;
+int flagArchivoBinario;
 char resp='s';
-char bufId;
-char bufNombre[128];
-char bufHorasTrabajadas;
-char bufSueldo;
+
 
 controller_loadFromText("data.csv",listaEmpleados);
 
 
 do{
-	utn_menu();
+	utn_menuPrincipal();
 	__fpurge(stdin);
-	scanf("%d",option);
+	scanf("%d",&option);
 	switch(option)
     {
     	case 1:	if(controller_loadFromText("data.csv",listaEmpleados)==0)
@@ -69,16 +68,59 @@ do{
 
            		}
            		break;
-    	case 2:	if(controller_loadFromBinary("data.csv",listaEmpleados)==0)
+    	case 2:	if(controller_loadFromBinary("data2.bin",listaEmpleados)==0)
     	        {
     	        }
     	        break;
     	case 3:	if(listaEmpleados!=NULL)
     	        {
+
     				controller_addEmployee(listaEmpleados);
-    				cont++;
     	        }
     	        break;
+    	case 4:	if(listaEmpleados!=NULL)
+    	    	        {
+    	    				controller_addEmployee(listaEmpleados);
+    	    				cont++;
+    	    	        }
+    	    	        break;
+    	case 5:	if(listaEmpleados!=NULL)
+    	    	        {
+    	    				controller_addEmployee(listaEmpleados);
+    	    				cont++;
+    	    	        }
+    	    	        break;
+    	case 6:	if(listaEmpleados!=NULL)
+    	    	        {
+    	    				controller_addEmployee(listaEmpleados);
+    	    				cont++;
+    	    	        }
+    	    	        break;
+    	case 7:	if(listaEmpleados!=NULL)
+    	    	        {
+    	    				controller_addEmployee(listaEmpleados);
+    	    				cont++;
+    	    	        }
+    	    	        break;
+    	case 8:	if(listaEmpleados!=NULL)
+    	    	        {
+    	    				controller_addEmployee(listaEmpleados);
+    	    				cont++;
+    	    	        }
+    	    	        break;
+    	case 9:	if(listaEmpleados!=NULL)
+    	    	        {
+    	    				controller_addEmployee(listaEmpleados);
+    	    				cont++;
+    	    	        }
+    	    	        break;
+    	case 10:	if(listaEmpleados!=NULL)
+    	    	        {
+    	    				controller_addEmployee(listaEmpleados);
+    	    				cont++;
+    	    	        }
+    	    	        break;
+    	default:	return 0;
     }
 }while(option != 10);
 return 0;

@@ -1,15 +1,28 @@
-22:10:43 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
+20:02:01 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
 make all 
-Building file: ../src/utn_arrayEmployees.c
+Building file: ../src/TrabajoPractico3.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_arrayEmployees.d" -MT"src/utn_arrayEmployees.o" -o "src/utn_arrayEmployees.o" "../src/utn_arrayEmployees.c"
-Finished building: ../src/utn_arrayEmployees.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
+../src/TrabajoPractico3.c: In function ‘main’:
+../src/TrabajoPractico3.c:54:6: warning: unused variable ‘resp’ [-Wunused-variable]
+ char resp='s';
+      ^~~~
+../src/TrabajoPractico3.c:53:5: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
+ int flagArchivoBinario;
+     ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/TrabajoPractico3.c
  
-Building target: trabajo_practico_2
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building target: TrabajoPractico3
 Invoking: GCC C Linker
-gcc  -o "trabajo_practico_2"  ./src/trabajo_practico_2.o ./src/utn_arrayEmployees.o ./src/utn_inputs.o   
-Finished building target: trabajo_practico_2
- 
-22:10:43 **** Incremental Build of configuration Debug for project trabajo_practico_2 ****
-make all 
-make: No se hace nada para 'all'.
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+./src/Controller.o: En la función `controller_addEmployee':
+/home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/Debug/../src/Controller.c:82: referencia a `utn_buscarUltimoId' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [TrabajoPractico3] Error 1
+makefile:30: fallo en las instrucciones para el objetivo 'TrabajoPractico3'
+"make all" terminated with exit code 2. Build might be incomplete.

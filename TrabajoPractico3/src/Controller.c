@@ -50,7 +50,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 	char texto[50];
 
 
-	if((pArchivo=fopen(path,"r+"))==NULL)
+	if((pArchivo=fopen(path,"r+b"))==NULL)
 	{
 		printf("El archivo no puede ser abierto");
 		retorno=-1;
@@ -73,7 +73,21 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
+	char bufId[10];
+	char bufNombre[128];
+	char bufHorasTrabajadas[10];
+	char bufSueldo[10];
+	Employee* pAux;
 
+	utn_buscarUltimoId(pArrayListEmployee,bufId);
+	utn_getStringChar(bufNombre,"Ingrese el nombre","Error debe ingresar caracteres alfabéticos",128,128);
+	utn_getStringInt(bufHorasTrabajadas,"Ingrese la cantidad de horas trabajadas","Error solo debe ingresar números",0,744,10);
+
+	pAux=employee_newParametros(bufId,bufNombre,bufHorasTrabajadas,bufSueldo);
+	if(pAux!=NULL)
+	{
+		ll_add(pArrayListEmployee,pAux);
+	}
     return 1;
 }
 
