@@ -9,9 +9,9 @@
 #define EXTRAS_H_
 
 void utn_menuPrincipal();
+void utn_buscarUltimoId(LinkedList* pArrayListEmployeepArrayListEmployee,char bufId[]);
 int utn_getInt(char *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos);
 int utn_getStringChar (char *pResultado,char *pMensaje,char *pMensajeError,int maximo,int limite);
-int utn_getStringInt (char *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int limite);
 
 
 #endif /* EXTRAS_H_ */

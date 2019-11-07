@@ -1,28 +1,935 @@
-20:02:01 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+21:38:49 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
 make all 
-Building file: ../src/TrabajoPractico3.c
+Building file: ../src/Controller.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
-../src/TrabajoPractico3.c: In function ‘main’:
-../src/TrabajoPractico3.c:54:6: warning: unused variable ‘resp’ [-Wunused-variable]
- char resp='s';
-      ^~~~
-../src/TrabajoPractico3.c:53:5: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
- int flagArchivoBinario;
-     ^~~~~~~~~~~~~~~~~~
-Finished building: ../src/TrabajoPractico3.c
- 
-Building file: ../src/parser.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:124:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:128:9: error: incompatible types when assigning to type ‘Employee {aka struct <anonymous>}’ from type ‘Employee * {aka struct <anonymous> *}’
+     aux2=aux;
+         ^
+../src/Controller.c:129:35: error: incompatible type for argument 1 of ‘employee_getId’
+     printf("%d\t", employee_getId(aux2,id));
+src/subdir.mk:30: fallo en las instrucciones para el objetivo 'src/Controller.o'
+                                   ^~~~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘Employee * {aka struct <anonymous> *}’ but argument is of type ‘Employee {aka struct <anonymous>}’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c:129:40: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     printf("%d\t", employee_getId(aux2,id));
+                                        ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:39:34 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:124:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:129:35: error: incompatible type for argument 1 of ‘employee_getId’
+     printf("%d\t", employee_getId(aux2,id));
+src/subdir.mk:30: fallo en las instrucciones para el objetivo 'src/Controller.o'
+                                   ^~~~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘Employee * {aka struct <anonymous> *}’ but argument is of type ‘Employee {aka struct <anonymous>}’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c:129:40: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     printf("%d\t", employee_getId(aux2,id));
+                                        ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:39:34 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:124:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:129:35: error: incompatible type for argument 1 of ‘employee_getId’
+src/subdir.mk:30: fallo en las instrucciones para el objetivo 'src/Controller.o'
+     printf("%d\t", employee_getId(aux2,id));
+                                   ^~~~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘Employee * {aka struct <anonymous> *}’ but argument is of type ‘Employee {aka struct <anonymous>}’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c:129:40: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     printf("%d\t", employee_getId(aux2,id));
+                                        ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:39:47 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:124:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:129:39: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     printf("%d\t", employee_getId(aux,id));
+                                       ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c:121:11: warning: variable ‘aux2’ set but not used [-Wunused-but-set-variable]
+  Employee aux2;
+           ^~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:129:5: warning: ‘id’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     printf("%d\t", employee_getId(aux,id));
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
  
 Building target: TrabajoPractico3
 Invoking: GCC C Linker
 gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-./src/Controller.o: En la función `controller_addEmployee':
-/home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/Debug/../src/Controller.c:82: referencia a `utn_buscarUltimoId' sin definir
-collect2: error: ld returned 1 exit status
-make: *** [TrabajoPractico3] Error 1
-makefile:30: fallo en las instrucciones para el objetivo 'TrabajoPractico3'
-"make all" terminated with exit code 2. Build might be incomplete.
+Finished building target: TrabajoPractico3
+ 
+21:40:22 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:127:39: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     printf("%d\n", employee_getId(aux,id));
+                                       ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:142:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:127:5: warning: ‘id’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     printf("%d\n", employee_getId(aux,id));
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:40:22 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:40:23 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:40:58 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:127:35: warning: passing argument 1 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     printf("%d\n", employee_getId(aux->id,id));
+                                   ^~~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘Employee * {aka struct <anonymous> *}’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c:127:43: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     printf("%d\n", employee_getId(aux->id,id));
+                                           ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:142:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:127:5: warning: ‘id’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     printf("%d\n", employee_getId(aux->id,id));
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:40:59 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:41:47 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:127:24: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     employee_getId(aux,id);
+                        ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:143:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:127:5: warning: ‘id’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     employee_getId(aux,id);
+     ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:41:48 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:44:43 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:127:27: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     if(employee_getId(aux,id)==0)
+                           ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:127:8: warning: ‘id’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if(employee_getId(aux,id)==0)
+        ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:44:44 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:46:06 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:127:27: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     if(employee_getId(aux,id)==0)
+                           ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c:129:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+      printf("%d\n", &id);
+               ^
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:46:08 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:46:29 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:46:30 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:47:26 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:47:27 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:50:13 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:127:27: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     if(employee_getId(aux,aux->id)==0)
+                           ^~~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:129:6: warning: ‘id’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      printf("%d\n", id);
+      ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:50:14 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:51:11 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:128:27: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     if(employee_getId(aux,id)==0)
+                           ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:51:12 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:52:52 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:129:27: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     if(employee_getId(aux,id)==0)
+                           ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:145:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:53:20 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:129:27: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     if(employee_getId(aux,id)==0)
+                           ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:53:22 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:55:28 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c:129:27: warning: passing argument 2 of ‘employee_getId’ makes pointer from integer without a cast [-Wint-conversion]
+     if(employee_getId(aux,id)==0)
+                           ^~
+In file included from ../src/Controller.c:6:0:
+../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int’
+ int employee_getId(Employee* this,int* id);
+     ^~~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:55:30 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+21:56:56 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+21:56:57 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+22:02:09 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:123:3: warning: statement with no effect [-Wunused-value]
+   ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+   ^
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building file: ../src/Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
+../src/Employee.c: In function ‘employee_getHorasTrabajadas’:
+../src/Employee.c:89:19: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   horasTrabajadas = this->horasTrabajadas;
+                   ^
+../src/Employee.c: In function ‘employee_getSueldo’:
+../src/Employee.c:109:10: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   sueldo = this->sueldo;
+          ^
+Finished building: ../src/Employee.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+22:02:10 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+22:05:12 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:124:2: warning: statement with no effect [-Wunused-value]
+  ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+  ^
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building file: ../src/Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
+Finished building: ../src/Employee.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+22:05:12 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+22:05:14 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+22:05:59 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_ListEmployee’:
+../src/Controller.c:124:2: warning: statement with no effect [-Wunused-value]
+  ("Id\tNombre\tHoras Trabajadas\tSueldo\n");
+  ^
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+22:06:13 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromText’:
+../src/Controller.c:21:21: warning: unused variable ‘longitudTexto’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+                     ^~~~~~~~~~~~~
+../src/Controller.c:21:6: warning: unused variable ‘cantidadLeida’ [-Wunused-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:45:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/Controller.c
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:53:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajos_practicos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+22:06:14 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
