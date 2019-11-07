@@ -18,13 +18,14 @@ int controller_loadFromText(char *path, LinkedList *pArrayListEmployee) {
 
 	FILE *pArchivo;
 	int retorno = 0;
-	int cantidadLeida, longitudTexto;
 
-	if ((pArchivo = fopen(path, "r+")) == NULL) {
+	if ((pArchivo = fopen(path, "r")) == NULL) {
 		printf("El archivo no puede ser abierto");
 		retorno = -1;
 	} else {
+
 		parser_EmployeeFromText(pArchivo, pArrayListEmployee);
+		fclose(pArchivo);
 	}
 	//UNA VEZ LEIDO LLAMAR A LA FUNCION NEW_EMPLOYEE PARA QUE GUARDE UNA POSICION EN LA STRUCT DE EMPLOYEE
 
@@ -76,8 +77,8 @@ int controller_addEmployee(LinkedList *pArrayListEmployee) {
 			"Error debe ingresar caracteres alfabéticos", 128, 128);
 	utn_getInt(bufHorasTrabajadas, "Ingrese la cantidad de horas trabajadas",
 			"Error solo debe ingresar números", 0, 744, 10);
-	utn_getInt(bufSueldo, "Ingrese la cantidad de horas trabajadas",
-			"Error solo debe ingresar números", 0, 744, 10);
+	utn_getInt(bufSueldo, "Ingrese el sueldo",
+			"Error solo debe ingresar números", 0, 1000000, 10);
 
 	pAux = employee_newParametros(bufId, bufNombre, bufHorasTrabajadas,
 			bufSueldo);
@@ -124,30 +125,29 @@ int controller_ListEmployee(LinkedList *pArrayListEmployee) {
 	printf("Id\tNombre\tHoras Trabajadas\tSueldo\n");
 	for (i = 0; i < ll_len(pArrayListEmployee); i++) {
 
-		aux = ll_get(pArrayListEmployee, i);
-		//id=aux->id;
-		//id=1500;
-		if (employee_getId(aux, &id) == 0) {
-			printf("%d\t", id);
-		} else {
-			printf("error\n");
+			aux = ll_get(pArrayListEmployee, i);
+
+			if (employee_getId(aux, &id) == 0) {
+				printf("%d\t", id);
+			} else {
+				printf("error\n");
+			}
+			if (employee_getNombre(aux, nombre) == 0) {
+				printf("%s\t", nombre);
+			} else {
+				printf("error\n");
+			}
+			if (employee_getHorasTrabajadas(aux, &horas) == 0) {
+				printf("%d\t", horas);
+			} else {
+				printf("error\n");
+			}
+			if (employee_getSueldo(aux, &sueldo) == 0) {
+				printf("%d\n", sueldo);
+			} else {
+				printf("error\n");
+			}
 		}
-		if (employee_getNombre(aux, nombre) == 0) {
-			printf("%s\t", nombre);
-		} else {
-			printf("error\n");
-		}
-		if (employee_getHorasTrabajadas(aux, &horas) == 0) {
-			printf("%d\t", horas);
-		} else {
-			printf("error\n");
-		}
-		if (employee_getSueldo(aux, &sueldo) == 0) {
-			printf("%d\n", sueldo);
-		} else {
-			printf("error\n");
-		}
-	}
 	return 1;
 }
 

@@ -12,6 +12,7 @@ void utn_menuPrincipal();
 void utn_buscarUltimoId(LinkedList* pArrayListEmployeepArrayListEmployee,char bufId[]);
 int utn_getInt(char *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos);
 int utn_getStringChar (char *pResultado,char *pMensaje,char *pMensajeError,int maximo,int limite);
-
+int utn_guardarArchivoTXT(char *path, LinkedList *pArrayListEmployee);
+int utn_usarGets(int* id,char nombre[],int* horas,int* sueldo,Employee* aux);
 
 #endif /* EXTRAS_H_ */

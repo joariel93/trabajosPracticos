@@ -6,6 +6,8 @@
 #include "Employee.h"
 #include "Extras.h"
 
+
+#define ARCHIVOTEXTO "data.csv"
 /****************************************************
  Menu:
  1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).
@@ -42,6 +44,8 @@
  */
 
 int main() {
+	FILE* pArchivoTxt=ARCHIVOTEXTO;
+	FILE* pArchivoBin;
 	int option;
 	LinkedList *listaEmpleados = ll_newLinkedList();
 	//Employee** lista = (Employee**) malloc(sizeof(Employee*));
@@ -57,7 +61,7 @@ int main() {
 		scanf("%d", &option);
 		switch (option) {
 		case 1:
-			if (controller_loadFromText("data.csv", listaEmpleados) == 0) {
+			if (controller_loadFromText(ARCHIVOTEXTO, listaEmpleados) == 0) {
 				printf("Archivo abierto como texto\n");
 			}
 			break;
@@ -68,6 +72,7 @@ int main() {
 		case 3:
 			if (listaEmpleados != NULL) {
 				controller_addEmployee(listaEmpleados);
+				utn_guardarArchivoTXT(ARCHIVOTEXTO,listaEmpleados);
 
 			}
 			break;
