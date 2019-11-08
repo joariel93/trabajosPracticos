@@ -38,6 +38,19 @@ int utn_menuEmpleado(char *pMensaje, char *id) {
 	printf("[4] Salir\n");
 	return 0;
 }
+void utn_menuSort() {
+	printf("[1] Ordenar por ID\n");
+	printf("[2] Ordenar por Nombre\n");
+	printf("[3] Ordenar por horas trabajdas\n");
+	printf("[4] Ordenar por sueldo\n");
+	printf("[5] Volver\n");
+
+}
+void utn_menuSort2() {
+	printf("[1] Ascendente\n");
+	printf("[2] Descendente\n");
+	printf("[3] Volver\n");
+}
 void utn_buscarUltimoId(LinkedList *pArrayListEmployee, char bufId[]) {
 	Employee *aux;
 	int i;

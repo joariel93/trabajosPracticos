@@ -10,6 +10,7 @@
 
 void utn_menuPrincipal();
 int utn_menuEmpleado(char *pMensaje, char* id);
+void utn_menuSort();
 void utn_buscarUltimoId(LinkedList* pArrayListEmployeepArrayListEmployee,char bufId[]);
 int utn_getInt(char *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos);
 int utn_getStringChar (char *pResultado,char *pMensaje,char *pMensajeError,int maximo,int limite);

@@ -182,7 +182,7 @@ int controller_removeEmployee(LinkedList *pArrayListEmployee) {
 	int ID;
 	int i;
 	int posID = NULL;
-	int confirm=NULL;
+	int confirm = NULL;
 	char name[128];
 
 	controller_ListEmployee(pArrayListEmployee);
@@ -197,15 +197,14 @@ int controller_removeEmployee(LinkedList *pArrayListEmployee) {
 		}
 
 	}
-	if(posID==NULL){
+	if (posID == NULL) {
 		printf("El ID ingresado no corresponde a un empleado\n");
-	}else{
-		employee_getNombre(aux,name);
-		printf("Desea eliminar a %s?\n[1] Si\n[2]No\n",name);
-		scanf("%d",&confirm);
-		if(confirm==1)
-		{
-			ll_remove(pArrayListEmployee,posID);
+	} else {
+		employee_getNombre(aux, name);
+		printf("Desea eliminar a %s?\n[1] Si\n[2]No\n", name);
+		scanf("%d", &confirm);
+		if (confirm == 1) {
+			ll_remove(pArrayListEmployee, posID);
 		}
 
 	}
@@ -244,7 +243,85 @@ int controller_ListEmployee(LinkedList *pArrayListEmployee) {
  *
  */
 int controller_sortEmployee(LinkedList *pArrayListEmployee) {
+	int retorno = 0;
+	int opcion, opcion2;
 
+	if (pArrayListEmployee == NULL) {
+		retorno = -1;
+	} else {
+		do {
+			utn_menuSort();
+			__fpurge(stdin);
+			scanf("%d", &opcion);
+			switch (opcion) {
+			case 1:do{
+				utn_menuSort2();
+				__fpurge(stdin);
+				scanf("%d", &opcion2);
+				switch (opcion2) {
+				case 1:
+					ll_sort(pArrayListEmployee, funCritID, 1);
+					break;
+				case 2:
+					ll_sort(pArrayListEmployee, funCritID, 0);
+					break;
+				default: return 0;
+				}}while(opcion2<1||opcion2>2);
+
+				break;
+			case 2:do{
+				utn_menuSort2();
+				__fpurge(stdin);
+				scanf("%d", &opcion2);
+				switch (opcion2) {
+				case 1:
+					ll_sort(pArrayListEmployee, funCritName, 1);
+					break;
+				case 2:
+					ll_sort(pArrayListEmployee, funCritName, 0);
+					break;
+				default: return 0;
+				}}while(opcion2<1||opcion2>2);
+
+				break;
+			case 3:do{
+				utn_menuSort2();
+				__fpurge(stdin);
+				scanf("%d", &opcion2);
+				switch (opcion2) {
+				case 1:
+					ll_sort(pArrayListEmployee, funCritHoras, 1);
+					break;
+				case 2:
+					ll_sort(pArrayListEmployee, funCritHoras, 0);
+					break;
+				default: return 0;
+				}}while(opcion2<1||opcion2>2);
+
+				break;
+			case 4:do{
+				utn_menuSort2();
+				__fpurge(stdin);
+				scanf("%d", &opcion2);
+				switch (opcion2) {
+				case 1:
+					ll_sort(pArrayListEmployee, funCritSueldo, 1);
+					break;
+				case 2:
+					ll_sort(pArrayListEmployee, funCritSueldo, 0);
+					break;
+				default: return 0;
+				}}while(opcion2<1||opcion2>2);
+
+				break;
+			default:
+				return 0;
+			}
+		} while (opcion < 1 || opcion > 4);
+
+	}
+
+	return retorno;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).

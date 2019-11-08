@@ -112,4 +112,72 @@ int employee_getSueldo(Employee *this, int *sueldo) {
 
 	return retorno;
 }
+int funCritID(void *argumento1, void *argumento2) {
+	Employee *arg1 = (Employee*) argumento1;
+	Employee *arg2 = (Employee*) argumento2;
+	int id1, id2;
+	int retorno;
 
+	employee_getId(arg1, &id1);
+	employee_getId(arg2, &id2);
+
+	if (id1 < id2) {
+		retorno = -1;
+	} else if (id1 > id2) {
+		retorno = 1;
+
+	} else {
+		retorno = 0;
+	}
+	return retorno;
+}
+int funCritName(void *argumento1, void *argumento2) {
+	Employee *arg1 = (Employee*) argumento1;
+	Employee *arg2 = (Employee*) argumento2;
+	char name1[128];
+	char name2[128];
+	int retorno;
+	employee_getNombre(arg1, name1);
+	employee_getNombre(arg2, name2);
+
+retorno=strcmp(name1, name2);
+	return retorno;
+}
+int funCritHoras(void *argumento1, void *argumento2) {
+	Employee *arg1 = (Employee*) argumento1;
+	Employee *arg2 = (Employee*) argumento2;
+	int horas1, horas2;
+	int retorno;
+
+	employee_getHorasTrabajadas(arg1, &horas1);
+	employee_getHorasTrabajadas(arg2, &horas2);
+
+	if (horas1 < horas2) {
+		retorno = -1;
+	} else if (horas1 > horas2) {
+		retorno = 1;
+
+	} else {
+		retorno = 0;
+	}
+	return retorno;
+}
+int funCritSueldo(void *argumento1, void *argumento2) {
+	Employee *arg1 = (Employee*) argumento1;
+	Employee *arg2 = (Employee*) argumento2;
+	int sueldo1, sueldo2;
+	int retorno;
+
+	employee_getSueldo(arg1, &sueldo1);
+	employee_getSueldo(arg2, &sueldo2);
+
+	if (sueldo1 < sueldo2) {
+		retorno = -1;
+	} else if (sueldo1 > sueldo2) {
+		retorno = 1;
+
+	} else {
+		retorno = 0;
+	}
+	return retorno;
+}
