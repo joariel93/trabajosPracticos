@@ -30,17 +30,25 @@ void utn_menuPrincipal() {
 	printf("[10] Salir\n");
 
 }
+int utn_menuEmpleado(char *pMensaje, char* id) {
+	printf("%s %s\n", pMensaje,id);
+	printf("[1] Nombre\n");
+	printf("[2] Horas Trabajadas\n");
+	printf("[3] Sueldo\n");
+	printf("[4] Salir\n");
+	return 0;
+}
 void utn_buscarUltimoId(LinkedList *pArrayListEmployee, char bufId[]) {
-Employee* aux;
+	Employee *aux;
 	int i;
 	int id;
 
 	for (i = 0; i < ll_len(pArrayListEmployee); i++) {
-			aux = ll_get(pArrayListEmployee, i);
-		}
+		aux = ll_get(pArrayListEmployee, i);
+	}
 
-id=i+1;
-sprintf(bufId,"%d",id);
+	id = i + 1;
+	sprintf(bufId, "%d", id);
 }
 int utn_getInt(char *pResultado[], char *pMensaje, char *pMensajeError,
 		int minimo, int maximo, int reintentos) {
@@ -90,32 +98,11 @@ int utn_getStringChar(char *pResultado, char *pMensaje, char *pMensajeError,
 	}
 	return retorno;
 }
-int utn_guardarArchivoTXT(char *path, LinkedList *pArrayListEmployee)
-{
-	FILE* pFile;
-Employee* aux;
-int id, horas, sueldo;
-	char nombre[50];
-int retorno=-1;
-int i;
-fopen(path,"w");
-				fwrite(pFile,"ID\tNombre\tHorasTrabajadas\tSueldo\n");
-				for (i = 0; i < ll_len(pArrayListEmployee); i++) {
-				utn_usarGets(&id,nombre,&horas,&sueldo,aux);
-				fprintf(pFile,"%d,%s,%d,%d\n",id,nombre,horas,sueldo);
-				fclose(path);
-				retorno=0;
-				}
-
-
-	return retorno;
-}
-int utn_usarGets(int* id,char nombre[],int* horas,int* sueldo,Employee* aux)
-{
-	int retorno=0;
-	employee_getId(aux, &id);
+int utn_usarGets(int *id, char nombre[], int *horas, int *sueldo, Employee *aux) {
+	int retorno = 0;
+	employee_getId(aux, id);
 	employee_getNombre(aux, nombre);
-	employee_getHorasTrabajadas(aux, &horas);
-	employee_getSueldo(aux, &sueldo);
-			return retorno;
+	employee_getHorasTrabajadas(aux, horas);
+	employee_getSueldo(aux, sueldo);
+	return retorno;
 }

@@ -72,7 +72,7 @@ int main() {
 		case 3:
 			if (listaEmpleados != NULL) {
 				controller_addEmployee(listaEmpleados);
-				utn_guardarArchivoTXT(ARCHIVOTEXTO,listaEmpleados);
+				controller_saveAsText(ARCHIVOTEXTO,listaEmpleados);
 
 			}
 			break;
@@ -102,7 +102,7 @@ int main() {
 			break;
 		case 8:
 			if (listaEmpleados != NULL) {
-				controller_addEmployee(listaEmpleados);
+				controller_saveAsText(ARCHIVOTEXTO,listaEmpleados);
 
 			}
 			break;

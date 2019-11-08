@@ -70,16 +70,34 @@ int controller_addEmployee(LinkedList *pArrayListEmployee) {
 	char bufNombre[128];
 	char bufHorasTrabajadas[10];
 	char bufSueldo[10];
+	int option;
+	int flag = 0;
 	Employee *pAux;
 
-	utn_buscarUltimoId(pArrayListEmployee, bufId);
-	utn_getStringChar(bufNombre, "Ingrese el nombre",
-			"Error debe ingresar caracteres alfabéticos", 128, 128);
-	utn_getInt(bufHorasTrabajadas, "Ingrese la cantidad de horas trabajadas",
-			"Error solo debe ingresar números", 0, 744, 10);
-	utn_getInt(bufSueldo, "Ingrese el sueldo",
-			"Error solo debe ingresar números", 0, 1000000, 10);
+	do {
+		utn_buscarUltimoId(pArrayListEmployee, bufId);
+		utn_menuEmpleado("Creacion de Empleado, su numero de ID sera:", bufId);
+		__fpurge(stdin);
+		scanf("%d", &option);
+		switch (option) {
 
+		case 1:
+			utn_getStringChar(bufNombre, "Ingrese el nombre",
+					"Error debe ingresar caracteres alfabéticos", 128, 128);
+			break;
+		case 2:
+			utn_getInt(bufHorasTrabajadas,
+					"Ingrese la cantidad de horas trabajadas",
+					"Error solo debe ingresar números", 0, 744, 10);
+			break;
+		case 3:
+			utn_getInt(bufSueldo, "Ingrese el sueldo",
+					"Error solo debe ingresar números", 0, 1000000, 10);
+			break;
+		default:
+			break;
+		}
+	} while (!(option > 3 || option < 1));
 	pAux = employee_newParametros(bufId, bufNombre, bufHorasTrabajadas,
 			bufSueldo);
 	if (pAux != NULL) {
@@ -125,29 +143,11 @@ int controller_ListEmployee(LinkedList *pArrayListEmployee) {
 	printf("Id\tNombre\tHoras Trabajadas\tSueldo\n");
 	for (i = 0; i < ll_len(pArrayListEmployee); i++) {
 
-			aux = ll_get(pArrayListEmployee, i);
+		aux = ll_get(pArrayListEmployee, i);
 
-			if (employee_getId(aux, &id) == 0) {
-				printf("%d\t", id);
-			} else {
-				printf("error\n");
-			}
-			if (employee_getNombre(aux, nombre) == 0) {
-				printf("%s\t", nombre);
-			} else {
-				printf("error\n");
-			}
-			if (employee_getHorasTrabajadas(aux, &horas) == 0) {
-				printf("%d\t", horas);
-			} else {
-				printf("error\n");
-			}
-			if (employee_getSueldo(aux, &sueldo) == 0) {
-				printf("%d\n", sueldo);
-			} else {
-				printf("error\n");
-			}
-		}
+		utn_usarGets(&id, nombre, &horas, &sueldo, aux);
+		printf("%d\t%s\t%d\t%d\n", id, nombre, horas, sueldo);
+	}
 	return 1;
 }
 
@@ -170,6 +170,24 @@ int controller_sortEmployee(LinkedList *pArrayListEmployee) {
  *
  */
 int controller_saveAsText(char *path, LinkedList *pArrayListEmployee) {
+	FILE *pFile;
+		Employee *aux;
+		int id, horas, sueldo;
+		char nombre[50];
+		int retorno = -1;
+		int i;
+		pFile = fopen(path, "w");
+		fprintf(pFile, "ID,Nombre,horasTrabajadas,Sueldo\n");
+		for (i = 0; i < ll_len(pArrayListEmployee); i++) {
+			aux = (Employee*) ll_get(pArrayListEmployee, i);
+			utn_usarGets(&id, nombre, &horas, &sueldo, aux);
+			fprintf(pFile, "%d,%s,%d,%d\n", id, nombre, horas, sueldo);
+			retorno = 0;
+		}
+
+		fclose(pFile);
+
+		return retorno;
 	return 1;
 }
 

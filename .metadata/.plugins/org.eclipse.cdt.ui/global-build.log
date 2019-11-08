@@ -1,73 +1,323 @@
-20:24:26 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+12:20:57 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:46:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_addEmployee’:
+../src/Controller.c:79:67: warning: passing argument 2 of ‘utn_menuEmpleado’ makes integer from pointer without a cast [-Wint-conversion]
+   utn_menuEmpleado("Creacion de Empleado, su numero de ID sera:", bufId);
+                                                                   ^~~~~
+In file included from ../src/Controller.c:8:0:
+../src/Extras.h:12:5: note: expected ‘char’ but argument is of type ‘char *’
+ int utn_menuEmpleado(char *pMensaje, char id);
+     ^~~~~~~~~~~~~~~~
+../src/Controller.c:80:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
+   __fpurge(stdin);
+   ^~~~~~~~
+   __wur
+../src/Controller.c:74:6: warning: unused variable ‘flag’ [-Wunused-variable]
+  int flag = 0;
+      ^~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:54:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building file: ../src/Extras.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Extras.d" -MT"src/Extras.o" -o "src/Extras.o" "../src/Extras.c"
+../src/Extras.c: In function ‘utn_menuEmpleado’:
+../src/Extras.c:34:14: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘int’ [-Wformat=]
+  printf("%s %s\n", pMensaje,id);
+             ~^
+             %d
+../src/Extras.c: In function ‘utn_buscarUltimoId’:
+../src/Extras.c:42:12: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
+  Employee *aux;
+            ^~~
+../src/Extras.c: In function ‘utn_getInt’:
+../src/Extras.c:61:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sprintf(pResultado, "%d", number);
+            ^~~~~~~~~~
+In file included from ../src/Extras.c:7:0:
+/usr/include/stdio.h:320:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
+ extern int sprintf (char *__restrict __s,
+            ^~~~~~~
+../src/Extras.c: In function ‘utn_guardarArchivoTXT’:
+../src/Extras.c:112:3: warning: implicit declaration of function ‘utn_usarGets’ [-Wimplicit-function-declaration]
+   utn_usarGets(&id, nombre, &horas, &sueldo, aux);
+   ^~~~~~~~~~~~
+Finished building: ../src/Extras.c
+ 
+Building file: ../src/TrabajoPractico3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
+../src/TrabajoPractico3.c: In function ‘main’:
+../src/TrabajoPractico3.c:10:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+ #define ARCHIVOTEXTO "data.csv"
+                      ^
+../src/TrabajoPractico3.c:47:20: note: in expansion of macro ‘ARCHIVOTEXTO’
+  FILE* pArchivoTxt=ARCHIVOTEXTO;
+                    ^~~~~~~~~~~~
+../src/TrabajoPractico3.c:55:7: warning: unused variable ‘resp’ [-Wunused-variable]
+  char resp = 's';
+       ^~~~
+../src/TrabajoPractico3.c:54:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
+  int flagArchivoBinario;
+      ^~~~~~~~~~~~~~~~~~
+../src/TrabajoPractico3.c:53:6: warning: unused variable ‘cont’ [-Wunused-variable]
+  int cont = 0;
+      ^~~~
+../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
+  FILE* pArchivoBin;
+        ^~~~~~~~~~~
+../src/TrabajoPractico3.c:47:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
+  FILE* pArchivoTxt=ARCHIVOTEXTO;
+        ^~~~~~~~~~~
+Finished building: ../src/TrabajoPractico3.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+12:21:03 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+12:22:15 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:46:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_addEmployee’:
+../src/Controller.c:80:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
+   __fpurge(stdin);
+   ^~~~~~~~
+   __wur
+../src/Controller.c:74:6: warning: unused variable ‘flag’ [-Wunused-variable]
+  int flag = 0;
+      ^~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:54:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building file: ../src/Extras.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Extras.d" -MT"src/Extras.o" -o "src/Extras.o" "../src/Extras.c"
+../src/Extras.c: In function ‘utn_buscarUltimoId’:
+../src/Extras.c:42:12: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
+  Employee *aux;
+            ^~~
+../src/Extras.c: In function ‘utn_getInt’:
+../src/Extras.c:61:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sprintf(pResultado, "%d", number);
+            ^~~~~~~~~~
+In file included from ../src/Extras.c:7:0:
+/usr/include/stdio.h:320:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
+ extern int sprintf (char *__restrict __s,
+            ^~~~~~~
+../src/Extras.c: In function ‘utn_guardarArchivoTXT’:
+../src/Extras.c:112:3: warning: implicit declaration of function ‘utn_usarGets’ [-Wimplicit-function-declaration]
+   utn_usarGets(&id, nombre, &horas, &sueldo, aux);
+   ^~~~~~~~~~~~
+Finished building: ../src/Extras.c
+ 
+Building file: ../src/TrabajoPractico3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
+../src/TrabajoPractico3.c: In function ‘main’:
+../src/TrabajoPractico3.c:10:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+ #define ARCHIVOTEXTO "data.csv"
+                      ^
+../src/TrabajoPractico3.c:47:20: note: in expansion of macro ‘ARCHIVOTEXTO’
+  FILE* pArchivoTxt=ARCHIVOTEXTO;
+                    ^~~~~~~~~~~~
+../src/TrabajoPractico3.c:55:7: warning: unused variable ‘resp’ [-Wunused-variable]
+  char resp = 's';
+       ^~~~
+../src/TrabajoPractico3.c:54:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
+  int flagArchivoBinario;
+      ^~~~~~~~~~~~~~~~~~
+../src/TrabajoPractico3.c:53:6: warning: unused variable ‘cont’ [-Wunused-variable]
+  int cont = 0;
+      ^~~~
+../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
+  FILE* pArchivoBin;
+        ^~~~~~~~~~~
+../src/TrabajoPractico3.c:47:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
+  FILE* pArchivoTxt=ARCHIVOTEXTO;
+        ^~~~~~~~~~~
+Finished building: ../src/TrabajoPractico3.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+12:22:19 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+12:23:23 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:46:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_addEmployee’:
+../src/Controller.c:80:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
+   __fpurge(stdin);
+   ^~~~~~~~
+   __wur
+../src/Controller.c:74:6: warning: unused variable ‘flag’ [-Wunused-variable]
+  int flag = 0;
+      ^~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:54:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+12:23:27 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+make all 
+make: No se hace nada para 'all'.
+12:24:35 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
 make all 
 Building file: ../src/Extras.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Extras.d" -MT"src/Extras.o" -o "src/Extras.o" "../src/Extras.c"
 ../src/Extras.c: In function ‘utn_buscarUltimoId’:
-../src/Extras.c:34:11: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
- Employee* aux;
-           ^~~
+../src/Extras.c:42:12: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
+  Employee *aux;
+            ^~~
 ../src/Extras.c: In function ‘utn_getInt’:
-../src/Extras.c:53:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
+../src/Extras.c:61:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
     sprintf(pResultado, "%d", number);
             ^~~~~~~~~~
 In file included from ../src/Extras.c:7:0:
-/usr/include/stdio.h:366:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
+/usr/include/stdio.h:320:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
  extern int sprintf (char *__restrict __s,
             ^~~~~~~
 ../src/Extras.c: In function ‘utn_guardarArchivoTXT’:
-../src/Extras.c:104:5: warning: implicit declaration of function ‘utn_usarGets’ [-Wimplicit-function-declaration]
-     utn_usarGets(&id,nombre,&horas,&sueldo,aux);
-     ^~~~~~~~~~~~
-../src/Extras.c:106:12: warning: passing argument 1 of ‘fclose’ from incompatible pointer type [-Wincompatible-pointer-types]
-     fclose(path);
-            ^~~~
-In file included from ../src/Extras.c:7:0:
-/usr/include/stdio.h:239:12: note: expected ‘FILE * {aka struct _IO_FILE *}’ but argument is of type ‘char *’
- extern int fclose (FILE *__stream);
-            ^~~~~~
-../src/Extras.c: In function ‘utn_usarGets’:
-../src/Extras.c:116:22: warning: passing argument 2 of ‘employee_getId’ from incompatible pointer type [-Wincompatible-pointer-types]
-  employee_getId(aux, &id);
-                      ^
-In file included from ../src/Extras.c:13:0:
-../src/Employee.h:16:5: note: expected ‘int *’ but argument is of type ‘int **’
- int employee_getId(Employee* this,int* id);
-     ^~~~~~~~~~~~~~
-../src/Extras.c:118:35: warning: passing argument 2 of ‘employee_getHorasTrabajadas’ from incompatible pointer type [-Wincompatible-pointer-types]
-  employee_getHorasTrabajadas(aux, &horas);
-                                   ^
-In file included from ../src/Extras.c:13:0:
-../src/Employee.h:22:5: note: expected ‘int *’ but argument is of type ‘int **’
- int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/Extras.c:119:26: warning: passing argument 2 of ‘employee_getSueldo’ from incompatible pointer type [-Wincompatible-pointer-types]
-  employee_getSueldo(aux, &sueldo);
-                          ^
-In file included from ../src/Extras.c:13:0:
-../src/Employee.h:25:5: note: expected ‘int *’ but argument is of type ‘int **’
- int employee_getSueldo(Employee* this,int* sueldo);
-     ^~~~~~~~~~~~~~~~~~
-../src/Extras.c: In function ‘utn_guardarArchivoTXT’:
-../src/Extras.c:102:5: warning: ‘pFile’ is used uninitialized in this function [-Wuninitialized]
-     fprintf(pFile,"ID\tNombre\tHorasTrabajadas\tSueldo\n");
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/Extras.c:104:5: warning: ‘aux’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-     utn_usarGets(&id,nombre,&horas,&sueldo,aux);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Extras.c:112:3: warning: implicit declaration of function ‘utn_usarGets’ [-Wimplicit-function-declaration]
+   utn_usarGets(&id, nombre, &horas, &sueldo, aux);
+   ^~~~~~~~~~~~
 Finished building: ../src/Extras.c
  
 Building target: TrabajoPractico3
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/alumno/TP/trabajosPracticos/TrabajoPractico3/LinkedList.a
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
 Finished building target: TrabajoPractico3
  
-20:24:28 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+12:24:37 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
 make all 
 make: No se hace nada para 'all'.
-20:25:18 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+12:57:48 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
 make all 
-make: No se hace nada para 'all'.
-20:25:19 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:46:6: warning: variable ‘cantidadLeida’ set but not used [-Wunused-but-set-variable]
+  int cantidadLeida, longitudTexto;
+      ^~~~~~~~~~~~~
+../src/Controller.c: In function ‘controller_addEmployee’:
+../src/Controller.c:80:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
+   __fpurge(stdin);
+   ^~~~~~~~
+   __wur
+../src/Controller.c:74:6: warning: unused variable ‘flag’ [-Wunused-variable]
+  int flag = 0;
+      ^~~~
+../src/Controller.c: In function ‘controller_sortEmployee’:
+../src/Controller.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Controller.c: In function ‘controller_loadFromBinary’:
+../src/Controller.c:54:19: warning: ‘longitudTexto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Controller.c
+ 
+Building file: ../src/Extras.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Extras.d" -MT"src/Extras.o" -o "src/Extras.o" "../src/Extras.c"
+../src/Extras.c: In function ‘utn_buscarUltimoId’:
+../src/Extras.c:42:12: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
+  Employee *aux;
+            ^~~
+../src/Extras.c: In function ‘utn_getInt’:
+../src/Extras.c:61:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sprintf(pResultado, "%d", number);
+            ^~~~~~~~~~
+In file included from ../src/Extras.c:7:0:
+/usr/include/stdio.h:320:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
+ extern int sprintf (char *__restrict __s,
+            ^~~~~~~
+Finished building: ../src/Extras.c
+ 
+Building file: ../src/TrabajoPractico3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
+../src/TrabajoPractico3.c: In function ‘main’:
+../src/TrabajoPractico3.c:10:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+ #define ARCHIVOTEXTO "data.csv"
+                      ^
+../src/TrabajoPractico3.c:47:20: note: in expansion of macro ‘ARCHIVOTEXTO’
+  FILE* pArchivoTxt=ARCHIVOTEXTO;
+                    ^~~~~~~~~~~~
+../src/TrabajoPractico3.c:55:7: warning: unused variable ‘resp’ [-Wunused-variable]
+  char resp = 's';
+       ^~~~
+../src/TrabajoPractico3.c:54:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
+  int flagArchivoBinario;
+      ^~~~~~~~~~~~~~~~~~
+../src/TrabajoPractico3.c:53:6: warning: unused variable ‘cont’ [-Wunused-variable]
+  int cont = 0;
+      ^~~~
+../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
+  FILE* pArchivoBin;
+        ^~~~~~~~~~~
+../src/TrabajoPractico3.c:47:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
+  FILE* pArchivoTxt=ARCHIVOTEXTO;
+        ^~~~~~~~~~~
+Finished building: ../src/TrabajoPractico3.c
+ 
+Building target: TrabajoPractico3
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
+Finished building target: TrabajoPractico3
+ 
+12:57:53 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
 make all 
 make: No se hace nada para 'all'.
