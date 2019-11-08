@@ -30,8 +30,8 @@ void utn_menuPrincipal() {
 	printf("[10] Salir\n");
 
 }
-int utn_menuEmpleado(char *pMensaje, char* id) {
-	printf("%s %s\n", pMensaje,id);
+int utn_menuEmpleado(char *pMensaje, char *id) {
+	printf("%s %s\n", pMensaje, id);
 	printf("[1] Nombre\n");
 	printf("[2] Horas Trabajadas\n");
 	printf("[3] Sueldo\n");

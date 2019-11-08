@@ -6,8 +6,8 @@
 #include "Employee.h"
 #include "Extras.h"
 
-
 #define ARCHIVOTEXTO "data.csv"
+#define ARCHIVOBINARIO "dataBin.dat"
 /****************************************************
  Menu:
  1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).
@@ -44,8 +44,8 @@
  */
 
 int main() {
-	FILE* pArchivoTxt=ARCHIVOTEXTO;
-	FILE* pArchivoBin;
+	FILE *pArchivoTxt = ARCHIVOTEXTO;
+	FILE *pArchivoBin;
 	int option;
 	LinkedList *listaEmpleados = ll_newLinkedList();
 	//Employee** lista = (Employee**) malloc(sizeof(Employee*));
@@ -66,26 +66,30 @@ int main() {
 			}
 			break;
 		case 2:
-			if (controller_loadFromBinary("data2.bin", listaEmpleados) == 0) {
+			if (controller_loadFromBinary(ARCHIVOBINARIO, listaEmpleados)
+					== 0) {
 			}
 			break;
 		case 3:
 			if (listaEmpleados != NULL) {
 				controller_addEmployee(listaEmpleados);
-				controller_saveAsText(ARCHIVOTEXTO,listaEmpleados);
+				controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+				controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
 
 			}
 			break;
 		case 4:
 			if (listaEmpleados != NULL) {
-				utn_buscarUltimoId(listaEmpleados,bufId);
-
+				controller_editEmployee(listaEmpleados);
+				controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+				controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
 			}
 			break;
 		case 5:
 			if (listaEmpleados != NULL) {
-				controller_addEmployee(listaEmpleados);
-
+				controller_removeEmployee(listaEmpleados);
+				controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+				controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
 			}
 			break;
 		case 6:
@@ -102,13 +106,16 @@ int main() {
 			break;
 		case 8:
 			if (listaEmpleados != NULL) {
-				controller_saveAsText(ARCHIVOTEXTO,listaEmpleados);
+				controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+				printf("\nSe guardo el Archivo en modo texto correctamente\n");
 
 			}
 			break;
 		case 9:
 			if (listaEmpleados != NULL) {
-				controller_addEmployee(listaEmpleados);
+				controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
+				printf(
+						"\nSe guardo el Archivo en modo binario correctamente\n");
 
 			}
 			break;

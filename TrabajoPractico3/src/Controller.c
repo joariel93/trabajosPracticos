@@ -6,6 +6,7 @@
 #include "Employee.h"
 #include "parser.h"
 #include "Extras.h"
+#include "Controller.h"
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -42,19 +43,14 @@ int controller_loadFromText(char *path, LinkedList *pArrayListEmployee) {
 int controller_loadFromBinary(char *path, LinkedList *pArrayListEmployee) {
 
 	FILE *pArchivo;
-	int retorno = 0;
-	int cantidadLeida, longitudTexto;
-	char texto[50];
-
-	if ((pArchivo = fopen(path, "r+b")) == NULL) {
+	int retorno = -1;
+	if ((pArchivo = fopen(path, "rb")) == NULL) {
 		printf("El archivo no puede ser abierto");
-		retorno = -1;
+		return retorno;
 	}
-	while (!feof(pArchivo)) {
-		cantidadLeida = fread(texto, sizeof(char), longitudTexto, pArchivo);
-		printf("El texto leido es: %s", texto);
-	}
-
+	parser_EmployeeFromBinary(pArchivo, pArrayListEmployee);
+	retorno = 0;
+	fclose(pArchivo);
 	return retorno;
 }
 
@@ -82,16 +78,16 @@ int controller_addEmployee(LinkedList *pArrayListEmployee) {
 		switch (option) {
 
 		case 1:
-			utn_getStringChar(bufNombre, "Ingrese el nombre",
+			utn_getStringChar(bufNombre, "Ingrese el nombre ",
 					"Error debe ingresar caracteres alfabéticos", 128, 128);
 			break;
 		case 2:
 			utn_getInt(bufHorasTrabajadas,
-					"Ingrese la cantidad de horas trabajadas",
+					"Ingrese la cantidad de horas trabajadas ",
 					"Error solo debe ingresar números", 0, 744, 10);
 			break;
 		case 3:
-			utn_getInt(bufSueldo, "Ingrese el sueldo",
+			utn_getInt(bufSueldo, "Ingrese el sueldo ",
 					"Error solo debe ingresar números", 0, 1000000, 10);
 			break;
 		default:
@@ -114,7 +110,64 @@ int controller_addEmployee(LinkedList *pArrayListEmployee) {
  *
  */
 int controller_editEmployee(LinkedList *pArrayListEmployee) {
-	return 1;
+	Employee *aux;
+	int retorno = -1;
+	int i;
+	int ID;
+	int option;
+	int posID = NULL;
+	char idChange[10];
+	char bufName[128];
+	int newHoras, newSueldo;
+
+	controller_ListEmployee(pArrayListEmployee);
+	printf("Ingrese el ID del empleado que desea modificar ");
+	__fpurge(stdin);
+	scanf("%d", &ID);
+	for (i = 0; i < ll_len(pArrayListEmployee); i++) {
+		aux = ll_get(pArrayListEmployee, i);
+		if (aux->id == ID) {
+			posID = i;
+			break;
+		}
+
+	}
+	if (posID == NULL) {
+		printf("El ID ingresado no corresponde a un empleado");
+
+	} else {
+		do {
+			sprintf(idChange, "%d", ID);
+			utn_menuEmpleado("Que desea modificar al ID: ", idChange);
+			__fpurge(stdin);
+			scanf("%d", &option);
+			switch (option) {
+			case 1:
+				utn_getStringChar(bufName, "Ingrese el nuevo nombre ",
+						"Error debe ingresar caracteres alfabeticos", 128, 128);
+				employee_setNombre(aux, bufName);
+				break;
+			case 2:
+				utn_getInt(bufName, "Ingrese la nueva cantidad de horas ",
+						"Error debe ingresar una carga horaria valida", 0, 720,
+						5);
+				newHoras = atoi(bufName);
+				employee_setHorasTrabajadas(aux, newHoras);
+				break;
+			case 3:
+				utn_getInt(bufName, "Ingrese nuevo sueldo ",
+						"Error debe ingresar un valor valido", 0, 1000000, 5);
+				newSueldo = atoi(bufName);
+				employee_setSueldo(aux, newSueldo);
+				break;
+			default:
+				break;
+			}
+
+		} while (!(option > 3 || option < 1));
+		ll_set(pArrayListEmployee, posID, aux);
+	}
+	return retorno;
 }
 
 /** \brief Baja de empleado
@@ -125,6 +178,38 @@ int controller_editEmployee(LinkedList *pArrayListEmployee) {
  *
  */
 int controller_removeEmployee(LinkedList *pArrayListEmployee) {
+	Employee *aux;
+	int ID;
+	int i;
+	int posID = NULL;
+	int confirm=NULL;
+	char name[128];
+
+	controller_ListEmployee(pArrayListEmployee);
+	printf("Ingrese el ID del empleado que desea eliminar ");
+	__fpurge(stdin);
+	scanf("%d", &ID);
+	for (i = 0; i < ll_len(pArrayListEmployee); i++) {
+		aux = ll_get(pArrayListEmployee, i);
+		if (aux->id == ID) {
+			posID = i;
+			break;
+		}
+
+	}
+	if(posID==NULL){
+		printf("El ID ingresado no corresponde a un empleado\n");
+	}else{
+		employee_getNombre(aux,name);
+		printf("Desea eliminar a %s?\n[1] Si\n[2]No\n",name);
+		scanf("%d",&confirm);
+		if(confirm==1)
+		{
+			ll_remove(pArrayListEmployee,posID);
+		}
+
+	}
+
 	return 1;
 }
 
@@ -171,23 +256,23 @@ int controller_sortEmployee(LinkedList *pArrayListEmployee) {
  */
 int controller_saveAsText(char *path, LinkedList *pArrayListEmployee) {
 	FILE *pFile;
-		Employee *aux;
-		int id, horas, sueldo;
-		char nombre[50];
-		int retorno = -1;
-		int i;
-		pFile = fopen(path, "w");
-		fprintf(pFile, "ID,Nombre,horasTrabajadas,Sueldo\n");
-		for (i = 0; i < ll_len(pArrayListEmployee); i++) {
-			aux = (Employee*) ll_get(pArrayListEmployee, i);
-			utn_usarGets(&id, nombre, &horas, &sueldo, aux);
-			fprintf(pFile, "%d,%s,%d,%d\n", id, nombre, horas, sueldo);
-			retorno = 0;
-		}
+	Employee *aux;
+	int id, horas, sueldo;
+	char nombre[50];
+	int retorno = -1;
+	int i;
+	pFile = fopen(path, "w");
+	fprintf(pFile, "ID,Nombre,horasTrabajadas,Sueldo\n");
+	for (i = 0; i < ll_len(pArrayListEmployee); i++) {
+		aux = (Employee*) ll_get(pArrayListEmployee, i);
+		utn_usarGets(&id, nombre, &horas, &sueldo, aux);
+		fprintf(pFile, "%d,%s,%d,%d\n", id, nombre, horas, sueldo);
+		retorno = 0;
+	}
 
-		fclose(pFile);
+	fclose(pFile);
 
-		return retorno;
+	return retorno;
 	return 1;
 }
 
@@ -199,5 +284,26 @@ int controller_saveAsText(char *path, LinkedList *pArrayListEmployee) {
  *
  */
 int controller_saveAsBinary(char *path, LinkedList *pArrayListEmployee) {
+	FILE *pFile;
+	Employee *aux;
+	int retorno = -1;
+	int i;
+	int contador = 0;
+
+	if (path != NULL && pArrayListEmployee != NULL) {
+		if ((pFile = fopen(path, "w+b")) == NULL) {
+			printf("El archivo no puede ser abierto");
+			retorno = -1;
+		} else {
+			for (i = 0; i < ll_len(pArrayListEmployee); i++) {
+				aux = ll_get(pArrayListEmployee, i);
+				contador = fwrite(aux, sizeof(Employee), 1, pFile);
+			}
+			retorno = 0;
+			fclose(pFile);
+
+		}
+	}
+
 	return 1;
 }
