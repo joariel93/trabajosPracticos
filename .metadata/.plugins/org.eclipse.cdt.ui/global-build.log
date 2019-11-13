@@ -1,1672 +1,554 @@
-16:47:36 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:36:55 **** Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../testing/src/Employee.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_loadFromBinary’:
-../src/Controller.c:45:12: warning: unused variable ‘aux’ [-Wunused-variable]
-  Employee *aux;
-            ^~~
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:75:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:69:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:201:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:199:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:158:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/Employee.d" -MT"testing/src/Employee.o" -o "testing/src/Employee.o" "../testing/src/Employee.c"
+Finished building: ../testing/src/Employee.c
  
-Building file: ../src/parser.c
+Building file: ../testing/src/addNodeTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/addNodeTest.d" -MT"testing/src/addNodeTest.o" -o "testing/src/addNodeTest.o" "../testing/src/addNodeTest.c"
+Finished building: ../testing/src/addNodeTest.c
  
-Building target: TrabajoPractico3
+Building file: ../testing/src/addTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/addTest.d" -MT"testing/src/addTest.o" -o "testing/src/addTest.o" "../testing/src/addTest.c"
+Finished building: ../testing/src/addTest.c
+ 
+Building file: ../testing/src/clearTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/clearTest.d" -MT"testing/src/clearTest.o" -o "testing/src/clearTest.o" "../testing/src/clearTest.c"
+Finished building: ../testing/src/clearTest.c
+ 
+Building file: ../testing/src/cloneTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/cloneTest.d" -MT"testing/src/cloneTest.o" -o "testing/src/cloneTest.o" "../testing/src/cloneTest.c"
+Finished building: ../testing/src/cloneTest.c
+ 
+Building file: ../testing/src/containsAllTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/containsAllTest.d" -MT"testing/src/containsAllTest.o" -o "testing/src/containsAllTest.o" "../testing/src/containsAllTest.c"
+Finished building: ../testing/src/containsAllTest.c
+ 
+Building file: ../testing/src/containsTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/containsTest.d" -MT"testing/src/containsTest.o" -o "testing/src/containsTest.o" "../testing/src/containsTest.c"
+Finished building: ../testing/src/containsTest.c
+ 
+Building file: ../testing/src/deleteLinkedListTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/deleteLinkedListTest.d" -MT"testing/src/deleteLinkedListTest.o" -o "testing/src/deleteLinkedListTest.o" "../testing/src/deleteLinkedListTest.c"
+Finished building: ../testing/src/deleteLinkedListTest.c
+ 
+Building file: ../testing/src/getNodeTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/getNodeTest.d" -MT"testing/src/getNodeTest.o" -o "testing/src/getNodeTest.o" "../testing/src/getNodeTest.c"
+Finished building: ../testing/src/getNodeTest.c
+ 
+Building file: ../testing/src/getTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/getTest.d" -MT"testing/src/getTest.o" -o "testing/src/getTest.o" "../testing/src/getTest.c"
+Finished building: ../testing/src/getTest.c
+ 
+Building file: ../testing/src/indexOfTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/indexOfTest.d" -MT"testing/src/indexOfTest.o" -o "testing/src/indexOfTest.o" "../testing/src/indexOfTest.c"
+Finished building: ../testing/src/indexOfTest.c
+ 
+Building file: ../testing/src/isEmptyTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/isEmptyTest.d" -MT"testing/src/isEmptyTest.o" -o "testing/src/isEmptyTest.o" "../testing/src/isEmptyTest.c"
+Finished building: ../testing/src/isEmptyTest.c
+ 
+Building file: ../testing/src/lenTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/lenTest.d" -MT"testing/src/lenTest.o" -o "testing/src/lenTest.o" "../testing/src/lenTest.c"
+Finished building: ../testing/src/lenTest.c
+ 
+Building file: ../testing/src/main_test.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/main_test.d" -MT"testing/src/main_test.o" -o "testing/src/main_test.o" "../testing/src/main_test.c"
+Finished building: ../testing/src/main_test.c
+ 
+Building file: ../testing/src/newTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/newTest.d" -MT"testing/src/newTest.o" -o "testing/src/newTest.o" "../testing/src/newTest.c"
+Finished building: ../testing/src/newTest.c
+ 
+Building file: ../testing/src/popTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/popTest.d" -MT"testing/src/popTest.o" -o "testing/src/popTest.o" "../testing/src/popTest.c"
+Finished building: ../testing/src/popTest.c
+ 
+Building file: ../testing/src/pushTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/pushTest.d" -MT"testing/src/pushTest.o" -o "testing/src/pushTest.o" "../testing/src/pushTest.c"
+Finished building: ../testing/src/pushTest.c
+ 
+Building file: ../testing/src/removeTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/removeTest.d" -MT"testing/src/removeTest.o" -o "testing/src/removeTest.o" "../testing/src/removeTest.c"
+Finished building: ../testing/src/removeTest.c
+ 
+Building file: ../testing/src/setTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/setTest.d" -MT"testing/src/setTest.o" -o "testing/src/setTest.o" "../testing/src/setTest.c"
+Finished building: ../testing/src/setTest.c
+ 
+Building file: ../testing/src/sortTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/sortTest.d" -MT"testing/src/sortTest.o" -o "testing/src/sortTest.o" "../testing/src/sortTest.c"
+Finished building: ../testing/src/sortTest.c
+ 
+Building file: ../testing/src/subListTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/subListTest.d" -MT"testing/src/subListTest.o" -o "testing/src/subListTest.o" "../testing/src/subListTest.c"
+Finished building: ../testing/src/subListTest.c
+ 
+Building file: ../testing/utest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/utest.d" -MT"testing/utest.o" -o "testing/utest.o" "../testing/utest.c"
+Finished building: ../testing/utest.c
+ 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-16:47:42 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/parser.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-16:48:46 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_loadFromBinary’:
-../src/Controller.c:45:12: warning: unused variable ‘aux’ [-Wunused-variable]
-  Employee *aux;
-            ^~~
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:77:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:71:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:203:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:201:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:160:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-16:48:49 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:37:27 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-16:49:10 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:48:28 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+18:48:34 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-16:51:20 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:48:51 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/parser.c
+Building file: ../src/main.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
  
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-16:51:22 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:48:54 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-16:51:38 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:53:03 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/parser.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
  
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-16:54:00 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_loadFromBinary’:
-../src/Controller.c:45:12: warning: unused variable ‘aux’ [-Wunused-variable]
-  Employee *aux;
-            ^~~
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:78:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:72:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:204:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:202:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building file: ../src/TrabajoPractico3.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
-../src/TrabajoPractico3.c: In function ‘main’:
-../src/TrabajoPractico3.c:10:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
- #define ARCHIVOTEXTO "data.csv"
-                      ^
-../src/TrabajoPractico3.c:48:20: note: in expansion of macro ‘ARCHIVOTEXTO’
-  FILE* pArchivoTxt=ARCHIVOTEXTO;
-                    ^~~~~~~~~~~~
-../src/TrabajoPractico3.c:56:7: warning: unused variable ‘resp’ [-Wunused-variable]
-  char resp = 's';
-       ^~~~
-../src/TrabajoPractico3.c:55:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
-  int flagArchivoBinario;
-      ^~~~~~~~~~~~~~~~~~
-../src/TrabajoPractico3.c:54:6: warning: unused variable ‘cont’ [-Wunused-variable]
-  int cont = 0;
-      ^~~~
-../src/TrabajoPractico3.c:49:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
-  FILE* pArchivoBin;
-        ^~~~~~~~~~~
-../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
-  FILE* pArchivoTxt=ARCHIVOTEXTO;
-        ^~~~~~~~~~~
-Finished building: ../src/TrabajoPractico3.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-16:54:04 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:53:05 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-16:57:46 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:77:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:71:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:203:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:201:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:160:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-16:57:48 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:53:05 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-16:58:35 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/TrabajoPractico3.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
-../src/TrabajoPractico3.c: In function ‘main’:
-../src/TrabajoPractico3.c:10:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
- #define ARCHIVOTEXTO "data.csv"
-                      ^
-../src/TrabajoPractico3.c:48:20: note: in expansion of macro ‘ARCHIVOTEXTO’
-  FILE* pArchivoTxt=ARCHIVOTEXTO;
-                    ^~~~~~~~~~~~
-../src/TrabajoPractico3.c:56:7: warning: unused variable ‘resp’ [-Wunused-variable]
-  char resp = 's';
-       ^~~~
-../src/TrabajoPractico3.c:55:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
-  int flagArchivoBinario;
-      ^~~~~~~~~~~~~~~~~~
-../src/TrabajoPractico3.c:54:6: warning: unused variable ‘cont’ [-Wunused-variable]
-  int cont = 0;
-      ^~~~
-../src/TrabajoPractico3.c:49:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
-  FILE* pArchivoBin;
-        ^~~~~~~~~~~
-../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
-  FILE* pArchivoTxt=ARCHIVOTEXTO;
-        ^~~~~~~~~~~
-Finished building: ../src/TrabajoPractico3.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-16:58:38 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+18:54:33 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-17:24:38 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:03:54 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:75:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:69:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:117:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:122:2: warning: implicit declaration of function ‘controller_ListEmployee’; did you mean ‘controller_editEmployee’? [-Wimplicit-function-declaration]
-  controller_ListEmployee(pArrayListEmployee);
-  ^~~~~~~~~~~~~~~~~~~~~~~
-  controller_editEmployee
-../src/Controller.c:124:2: error: expected ‘;’ before ‘__fpurge’
-  __fpurge(stdin);
-  ^~~~~~~~
-../src/Controller.c:125:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-  scanf("%d", ID);
-         ~^
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c:143:11: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-   scanf("%d",option);
-          ~^
-../src/Controller.c:146:3: warning: statement with no effect [-Wunused-value]
-   aux
-   ^~~
-../src/Controller.c:147:3: error: expected ‘;’ before ‘break’
-   break;
-   ^~~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:244:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:242:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:201:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-src/subdir.mk:30: recipe for target 'src/Controller.o' failed
-make: *** [src/Controller.o] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+19:03:55 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+19:05:29 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+19:05:29 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+19:05:30 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+19:06:19 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+19:06:20 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+19:06:23 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+19:07:42 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:63:5: error: incompatible types when assigning to type ‘Node {aka struct Node}’ from type ‘Node * {aka struct Node *}’
+ *aux=this->pFirstNode;
+     ^
+../src/LinkedList.c:69:8: error: incompatible types when assigning to type ‘Node {aka struct Node}’ from type ‘struct Node *’
+    *aux=aux->pNextNode;
+        ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-17:25:24 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:08:39 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:75:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:69:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:117:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:122:2: warning: implicit declaration of function ‘controller_ListEmployee’; did you mean ‘controller_editEmployee’? [-Wimplicit-function-declaration]
-  controller_ListEmployee(pArrayListEmployee);
-  ^~~~~~~~~~~~~~~~~~~~~~~
-  controller_editEmployee
-../src/Controller.c:124:2: error: expected ‘;’ before ‘__fpurge’
-  __fpurge(stdin);
-  ^~~~~~~~
-../src/Controller.c:125:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-  scanf("%d", ID);
-         ~^
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:65:11: error: incompatible types when returning type ‘Node {aka struct Node}’ but ‘Node * {aka struct Node *}’ was expected
+    return aux;
+           ^~~
+../src/LinkedList.c:70:12: error: invalid type argument of ‘->’ (have ‘Node {aka struct Node}’)
+    pAux=aux->pNextNode;
             ^~
-../src/Controller.c:143:11: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-   scanf("%d",option);
-          ~^
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:244:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:242:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-src/subdir.mk:30: recipe for target 'src/Controller.o' failed
-../src/Controller.c:201:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/Controller.o] Error 1
+../src/LinkedList.c:73:10: error: incompatible types when returning type ‘Node {aka struct Node}’ but ‘Node * {aka struct Node *}’ was expected
+   return aux;
+          ^~~
+../src/LinkedList.c:57:8: warning: variable ‘pAux’ set but not used [-Wunused-but-set-variable]
+  Node* pAux;
+        ^~~~
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-17:25:50 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:09:02 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:75:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:69:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:117:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:122:2: warning: implicit declaration of function ‘controller_ListEmployee’; did you mean ‘controller_editEmployee’? [-Wimplicit-function-declaration]
-  controller_ListEmployee(pArrayListEmployee);
-  ^~~~~~~~~~~~~~~~~~~~~~~
-  controller_editEmployee
-../src/Controller.c:125:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-  scanf("%d", ID);
-         ~^
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c:143:11: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-   scanf("%d",option);
-          ~^
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:244:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:242:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:201:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:125:2: warning: ‘ID’ is used uninitialized in this function [-Wuninitialized]
-  scanf("%d", ID);
-  ^~~~~~~~~~~~~~~
-../src/Controller.c:143:3: warning: ‘option’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-   scanf("%d",option);
-   ^~~~~~~~~~~~~~~~~~
-Finished building: ../src/Controller.c
- 
-Building file: ../src/Extras.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Extras.d" -MT"src/Extras.o" -o "src/Extras.o" "../src/Extras.c"
-../src/Extras.c: In function ‘utn_buscarUltimoId’:
-../src/Extras.c:42:12: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
-  Employee *aux;
-            ^~~
-../src/Extras.c: In function ‘utn_getInt’:
-../src/Extras.c:61:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
-    sprintf(pResultado, "%d", number);
-            ^~~~~~~~~~
-In file included from ../src/Extras.c:7:0:
-/usr/include/stdio.h:320:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
- extern int sprintf (char *__restrict __s,
-            ^~~~~~~
-Finished building: ../src/Extras.c
- 
-Building file: ../src/TrabajoPractico3.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
-../src/TrabajoPractico3.c: In function ‘main’:
-../src/TrabajoPractico3.c:9:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
- #define ARCHIVOTEXTO "data.csv"
-                      ^
-../src/TrabajoPractico3.c:47:22: note: in expansion of macro ‘ARCHIVOTEXTO’
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-                      ^~~~~~~~~~~~
-../src/TrabajoPractico3.c:56:7: warning: unused variable ‘bufId’ [-Wunused-variable]
-  char bufId[10];
-       ^~~~~
-../src/TrabajoPractico3.c:55:7: warning: unused variable ‘resp’ [-Wunused-variable]
-  char resp = 's';
-       ^~~~
-../src/TrabajoPractico3.c:54:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
-  int flagArchivoBinario;
-      ^~~~~~~~~~~~~~~~~~
-../src/TrabajoPractico3.c:53:6: warning: unused variable ‘cont’ [-Wunused-variable]
-  int cont = 0;
-      ^~~~
-../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
-  FILE *pArchivoBin;
-        ^~~~~~~~~~~
-../src/TrabajoPractico3.c:47:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-        ^~~~~~~~~~~
-Finished building: ../src/TrabajoPractico3.c
- 
-Building file: ../src/parser.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:26:41 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:75:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:69:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:117:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:122:2: warning: implicit declaration of function ‘controller_ListEmployee’; did you mean ‘controller_editEmployee’? [-Wimplicit-function-declaration]
-  controller_ListEmployee(pArrayListEmployee);
-  ^~~~~~~~~~~~~~~~~~~~~~~
-  controller_editEmployee
-../src/Controller.c:125:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-  scanf("%d", ID);
-         ~^
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c:143:11: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-   scanf("%d",option);
-          ~^
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:244:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:242:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:201:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:125:2: warning: ‘ID’ is used uninitialized in this function [-Wuninitialized]
-  scanf("%d", ID);
-  ^~~~~~~~~~~~~~~
-../src/Controller.c:143:3: warning: ‘option’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-   scanf("%d",option);
-   ^~~~~~~~~~~~~~~~~~
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:35:50 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:126:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-  scanf("%d", ID);
-         ~^
-../src/Controller.c:136:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c:144:12: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-    scanf("%d", option);
-           ~^
-../src/Controller.c:121:16: warning: unused variable ‘newSueldo’ [-Wunused-variable]
-  int newHoras, newSueldo;
-                ^~~~~~~~~
-../src/Controller.c:121:6: warning: variable ‘newHoras’ set but not used [-Wunused-but-set-variable]
-  int newHoras, newSueldo;
-      ^~~~~~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:253:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:251:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:210:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:126:2: warning: ‘ID’ is used uninitialized in this function [-Wuninitialized]
-  scanf("%d", ID);
-  ^~~~~~~~~~~~~~~
-../src/Controller.c:144:4: warning: ‘option’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-    scanf("%d", option);
-    ^~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:48:50 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:126:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-  scanf("%d", ID);
-         ~^
-../src/Controller.c:136:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c:144:12: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-    scanf("%d", option);
-           ~^
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:260:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:258:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:217:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:126:2: warning: ‘ID’ is used uninitialized in this function [-Wuninitialized]
-  scanf("%d", ID);
-  ^~~~~~~~~~~~~~~
-../src/Controller.c:144:4: warning: ‘option’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-    scanf("%d", option);
-    ^~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:48:57 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-17:51:43 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:126:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-  scanf("%d", ID);
-         ~^
-../src/Controller.c:137:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c:146:12: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-    scanf("%d", option);
-           ~^
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:262:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:260:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:126:2: warning: ‘ID’ is used uninitialized in this function [-Wuninitialized]
-  scanf("%d", ID);
-  ^~~~~~~~~~~~~~~
-../src/Controller.c:146:4: warning: ‘option’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-    scanf("%d", option);
-    ^~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:51:45 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-17:52:24 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:137:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c:146:12: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-    scanf("%d", option);
-           ~^
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:262:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:260:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:146:4: warning: ‘option’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-    scanf("%d", option);
-    ^~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:52:27 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-17:53:03 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:137:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:262:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:260:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:53:05 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-17:56:01 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:259:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:257:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:216:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building file: ../src/TrabajoPractico3.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
-../src/TrabajoPractico3.c: In function ‘main’:
-../src/TrabajoPractico3.c:9:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
- #define ARCHIVOTEXTO "data.csv"
-                      ^
-../src/TrabajoPractico3.c:47:22: note: in expansion of macro ‘ARCHIVOTEXTO’
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-                      ^~~~~~~~~~~~
-../src/TrabajoPractico3.c:56:7: warning: unused variable ‘bufId’ [-Wunused-variable]
-  char bufId[10];
-       ^~~~~
-../src/TrabajoPractico3.c:55:7: warning: unused variable ‘resp’ [-Wunused-variable]
-  char resp = 's';
-       ^~~~
-../src/TrabajoPractico3.c:54:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
-  int flagArchivoBinario;
-      ^~~~~~~~~~~~~~~~~~
-../src/TrabajoPractico3.c:53:6: warning: unused variable ‘cont’ [-Wunused-variable]
-  int cont = 0;
-      ^~~~
-../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
-  FILE *pArchivoBin;
-        ^~~~~~~~~~~
-../src/TrabajoPractico3.c:47:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-        ^~~~~~~~~~~
-Finished building: ../src/TrabajoPractico3.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-17:56:05 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-18:08:01 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:200:10: warning: comparison between pointer and integer
-  if(posID==NULL){
-          ^~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:291:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:289:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-18:08:05 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-18:08:54 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/TrabajoPractico3.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
-../src/TrabajoPractico3.c: In function ‘main’:
-../src/TrabajoPractico3.c:9:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
- #define ARCHIVOTEXTO "data.csv"
-                      ^
-../src/TrabajoPractico3.c:47:22: note: in expansion of macro ‘ARCHIVOTEXTO’
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-                      ^~~~~~~~~~~~
-../src/TrabajoPractico3.c:56:7: warning: unused variable ‘bufId’ [-Wunused-variable]
-  char bufId[10];
-       ^~~~~
-../src/TrabajoPractico3.c:55:7: warning: unused variable ‘resp’ [-Wunused-variable]
-  char resp = 's';
-       ^~~~
-../src/TrabajoPractico3.c:54:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
-  int flagArchivoBinario;
-      ^~~~~~~~~~~~~~~~~~
-../src/TrabajoPractico3.c:53:6: warning: unused variable ‘cont’ [-Wunused-variable]
-  int cont = 0;
-      ^~~~
-../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
-  FILE *pArchivoBin;
-        ^~~~~~~~~~~
-../src/TrabajoPractico3.c:47:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-        ^~~~~~~~~~~
-Finished building: ../src/TrabajoPractico3.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-18:08:58 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-18:11:03 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:15: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  char confirm=NULL;
-               ^~~~
-../src/Controller.c:200:10: warning: comparison between pointer and integer
-  if(posID==NULL){
-          ^~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:291:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:289:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-18:11:06 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-18:12:59 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm=NULL;
-              ^~~~
-../src/Controller.c:200:10: warning: comparison between pointer and integer
-  if(posID==NULL){
-          ^~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:291:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:289:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-18:13:02 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-19:33:07 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘utn_menuSort’:
-../src/Controller.c:18:73: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_loadFromText(char *path, LinkedList *pArrayListEmployee) {
-                                                                         ^
-../src/Controller.c:43:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
-src/subdir.mk:30: recipe for target 'src/Controller.o' failed
- int controller_loadFromBinary(char *path, LinkedList *pArrayListEmployee) {
-                                                                           ^
-../src/Controller.c:64:60: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_addEmployee(LinkedList *pArrayListEmployee) {
-                                                            ^
-../src/Controller.c:112:61: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_editEmployee(LinkedList *pArrayListEmployee) {
-                                                             ^
-../src/Controller.c:180:63: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_removeEmployee(LinkedList *pArrayListEmployee) {
-                                                               ^
-../src/Controller.c:223:61: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_ListEmployee(LinkedList *pArrayListEmployee) {
-                                                             ^
-../src/Controller.c:246:61: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_sortEmployee(LinkedList *pArrayListEmployee) {
-                                                             ^
-../src/Controller.c:285:71: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_saveAsText(char *path, LinkedList *pArrayListEmployee) {
-                                                                       ^
-../src/Controller.c:314:73: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- int controller_saveAsBinary(char *path, LinkedList *pArrayListEmployee) {
-                                                                         ^
-In file included from ../src/Controller.c:9:0:
-../src/Controller.h:9:5: error: declaration for parameter ‘controller_saveAsBinary’ but no such parameter
- int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:8:5: error: declaration for parameter ‘controller_saveAsText’ but no such parameter
- int controller_saveAsText(char* path , LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:7:5: error: declaration for parameter ‘controller_sortEmployee’ but no such parameter
- int controller_sortEmployee(LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:6:5: error: declaration for parameter ‘controller_ListEmployee’ but no such parameter
- int controller_ListEmployee(LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:5:5: error: declaration for parameter ‘controller_removeEmployee’ but no such parameter
- int controller_removeEmployee(LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:4:5: error: declaration for parameter ‘controller_editEmployee’ but no such parameter
- int controller_editEmployee(LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:3:5: error: declaration for parameter ‘controller_addEmployee’ but no such parameter
- int controller_addEmployee(LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:2:5: error: declaration for parameter ‘controller_loadFromBinary’ but no such parameter
- int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/Controller.h:1:5: error: declaration for parameter ‘controller_loadFromText’ but no such parameter
- int controller_loadFromText(char* path , LinkedList* pArrayListEmployee);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/Controller.c:8:0:
-../src/Extras.h:17:5: error: declaration for parameter ‘utn_usarGets’ but no such parameter
- int utn_usarGets(int* id,char nombre[],int* horas,int* sueldo,Employee* aux);
-     ^~~~~~~~~~~~
-../src/Extras.h:16:5: error: declaration for parameter ‘utn_getStringChar’ but no such parameter
- int utn_getStringChar (char *pResultado,char *pMensaje,char *pMensajeError,int maximo,int limite);
-     ^~~~~~~~~~~~~~~~~
-../src/Extras.h:15:5: error: declaration for parameter ‘utn_getInt’ but no such parameter
- int utn_getInt(char *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos);
-     ^~~~~~~~~~
-../src/Extras.h:14:6: error: declaration for parameter ‘utn_buscarUltimoId’ but no such parameter
- void utn_buscarUltimoId(LinkedList* pArrayListEmployeepArrayListEmployee,char bufId[]);
-      ^~~~~~~~~~~~~~~~~~
-../src/Controller.c:337:1: error: expected ‘{’ at end of input
- }
- ^
-make: *** [src/Controller.o] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:64:6: error: incompatible types when assigning to type ‘Node {aka struct Node}’ from type ‘Node * {aka struct Node *}’
+ *pAux=this->pFirstNode;
+      ^
+../src/LinkedList.c:70:13: error: invalid type argument of ‘->’ (have ‘Node {aka struct Node}’)
+    *pAux=aux->pNextNode;
+             ^~
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-19:34:07 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:09:23 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm=NULL;
-              ^~~~
-../src/Controller.c:200:10: warning: comparison between pointer and integer
-src/subdir.mk:30: recipe for target 'src/Controller.o' failed
-  if(posID==NULL){
-          ^~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:261:37: error: too few arguments to function ‘funCritID’
-   case 1:ll_sort(pArrayListEmployee,funCritID(),1);
-                                     ^~~~~~~~~
-In file included from ../src/Controller.c:6:0:
-../src/Employee.h:27:5: note: declared here
- int funCritID(void* argumento1, void* argumento2);
-     ^~~~~~~~~
-../src/Controller.c:263:37: error: too few arguments to function ‘funCritName’
-   case 2:ll_sort(pArrayListEmployee,funCritName(),1);
-                                     ^~~~~~~~~~~
-In file included from ../src/Controller.c:6:0:
-../src/Employee.h:28:5: note: declared here
- int funCritName(void* argumento1, void* argumento2);
-     ^~~~~~~~~~~
-../src/Controller.c:265:37: error: too few arguments to function ‘funCritHoras’
-   case 3:ll_sort(pArrayListEmployee,funCritHoras(),1);
-                                     ^~~~~~~~~~~~
-In file included from ../src/Controller.c:6:0:
-../src/Employee.h:29:5: note: declared here
- int funCritHoras(void* argumento1, void* argumento2);
-     ^~~~~~~~~~~~
-../src/Controller.c:267:37: error: too few arguments to function ‘funCritSueldo’
-   case 4:ll_sort(pArrayListEmployee,funCritSueldo(),1);
-                                     ^~~~~~~~~~~~~
-In file included from ../src/Controller.c:6:0:
-../src/Employee.h:30:5: note: declared here
- int funCritSueldo(void* argumento1, void* argumento2);
-     ^~~~~~~~~~~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:319:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:317:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-make: *** [src/Controller.o] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:59:6: warning: unused variable ‘i’ [-Wunused-variable]
+  int i;
+      ^
+../src/LinkedList.c:57:8: warning: unused variable ‘pAux’ [-Wunused-variable]
+  Node* pAux;
+        ^~~~
+../src/LinkedList.c:56:7: warning: unused variable ‘aux’ [-Wunused-variable]
+  Node aux;
+       ^~~
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+19:09:45 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:56:8: warning: unused variable ‘pAux’ [-Wunused-variable]
+  Node* pAux;
+        ^~~~
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+19:16:43 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:62:9: error: incompatible types when assigning to type ‘Node {aka struct Node}’ from type ‘struct Node *’
+     *aux=aux->pNextNode;
+         ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-19:34:40 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:20:11 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm=NULL;
-              ^~~~
-../src/Controller.c:200:10: warning: comparison between pointer and integer
-  if(posID==NULL){
-          ^~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:319:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:317:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-Finished building: ../src/Controller.c
- 
-Building file: ../src/Employee.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:63:9: error: incompatible types when assigning to type ‘Node {aka struct Node}’ from type ‘struct Node *’
+     *aux=aux->pNextNode;
+         ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:20:38 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
-../src/Employee.c: In function ‘funCritName’:
-../src/Employee.c:139:6: warning: unused variable ‘retorno’ [-Wunused-variable]
-  int retorno;
-      ^~~~~~~
-Finished building: ../src/Employee.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
  
-Building file: ../src/Extras.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Extras.d" -MT"src/Extras.o" -o "src/Extras.o" "../src/Extras.c"
-../src/Extras.c: In function ‘utn_buscarUltimoId’:
-../src/Extras.c:50:12: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
-  Employee *aux;
-            ^~~
-../src/Extras.c: In function ‘utn_getInt’:
-../src/Extras.c:69:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
-    sprintf(pResultado, "%d", number);
-            ^~~~~~~~~~
-In file included from ../src/Extras.c:7:0:
-/usr/include/stdio.h:320:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
- extern int sprintf (char *__restrict __s,
-            ^~~~~~~
-Finished building: ../src/Extras.c
- 
-Building file: ../src/TrabajoPractico3.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico3.d" -MT"src/TrabajoPractico3.o" -o "src/TrabajoPractico3.o" "../src/TrabajoPractico3.c"
-../src/TrabajoPractico3.c: In function ‘main’:
-../src/TrabajoPractico3.c:9:22: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
- #define ARCHIVOTEXTO "data.csv"
-                      ^
-../src/TrabajoPractico3.c:47:22: note: in expansion of macro ‘ARCHIVOTEXTO’
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-                      ^~~~~~~~~~~~
-../src/TrabajoPractico3.c:56:7: warning: unused variable ‘bufId’ [-Wunused-variable]
-  char bufId[10];
-       ^~~~~
-../src/TrabajoPractico3.c:55:7: warning: unused variable ‘resp’ [-Wunused-variable]
-  char resp = 's';
-       ^~~~
-../src/TrabajoPractico3.c:54:6: warning: unused variable ‘flagArchivoBinario’ [-Wunused-variable]
-  int flagArchivoBinario;
-      ^~~~~~~~~~~~~~~~~~
-../src/TrabajoPractico3.c:53:6: warning: unused variable ‘cont’ [-Wunused-variable]
-  int cont = 0;
-      ^~~~
-../src/TrabajoPractico3.c:48:8: warning: unused variable ‘pArchivoBin’ [-Wunused-variable]
-  FILE *pArchivoBin;
-        ^~~~~~~~~~~
-../src/TrabajoPractico3.c:47:8: warning: unused variable ‘pArchivoTxt’ [-Wunused-variable]
-  FILE *pArchivoTxt = ARCHIVOTEXTO;
-        ^~~~~~~~~~~
-Finished building: ../src/TrabajoPractico3.c
- 
-Building file: ../src/parser.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
- 
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-19:34:48 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:20:41 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-19:37:18 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:20:54 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Employee.c
+make: No se hace nada para 'all'.
+19:22:25 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
-../src/Employee.c: In function ‘funCritName’:
-../src/Employee.c:139:6: warning: unused variable ‘retorno’ [-Wunused-variable]
-  int retorno;
-      ^~~~~~~
-Finished building: ../src/Employee.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:50:5: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  aux=&this->pFirstNode;
+     ^
+../src/LinkedList.c:53:11: warning: return from incompatible pointer type [-Wincompatible-pointer-types]
+    return &this->pFirstNode;
+           ^~~~~~~~~~~~~~~~~
+../src/LinkedList.c:61:13: warning: return from incompatible pointer type [-Wincompatible-pointer-types]
+      return &aux->pNextNode;
+             ^~~~~~~~~~~~~~~
+../src/LinkedList.c:63:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+     aux=&aux->pNextNode;
+        ^
+Finished building: ../src/LinkedList.c
  
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-19:37:24 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:22:25 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-19:38:48 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:22:29 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Employee.c
+make: No se hace nada para 'all'.
+19:24:26 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
-../src/Employee.c: In function ‘funCritName’:
-../src/Employee.c:143:16: warning: passing argument 1 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
-  return strcmp(&name1, &name2);
-                ^
-In file included from ../src/Employee.c:2:0:
-/usr/include/string.h:136:12: note: expected ‘const char *’ but argument is of type ‘char (*)[128]’
- extern int strcmp (const char *__s1, const char *__s2)
-            ^~~~~~
-../src/Employee.c:143:24: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
-  return strcmp(&name1, &name2);
-                        ^
-In file included from ../src/Employee.c:2:0:
-/usr/include/string.h:136:12: note: expected ‘const char *’ but argument is of type ‘char (*)[128]’
- extern int strcmp (const char *__s1, const char *__s2)
-            ^~~~~~
-Finished building: ../src/Employee.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:50:5: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  aux=&this->pFirstNode;
+     ^
+../src/LinkedList.c:63:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+     aux=&aux->pNextNode;
+        ^
+Finished building: ../src/LinkedList.c
  
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-19:38:52 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:24:28 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-19:44:04 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:26:43 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm=NULL;
-              ^~~~
-../src/Controller.c:200:10: warning: comparison between pointer and integer
-  if(posID==NULL){
-          ^~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:261:10: warning: implicit declaration of function ‘utn_menuSort2’; did you mean ‘utn_menuSort’? [-Wimplicit-function-declaration]
-   case 1:utn_menuSort2();
-          ^~~~~~~~~~~~~
-          utn_menuSort
-../src/Controller.c:267:39: warning: the address of ‘funCritID’ will always evaluate as ‘true’ [-Waddress]
-     case 2:ll_sort(pArrayListEmployee,!funCritID,1);
-                                       ^
-../src/Controller.c:267:39: warning: passing argument 2 of ‘ll_sort’ makes pointer from integer without a cast [-Wint-conversion]
-In file included from ../src/Controller.c:5:0:
-../src/LinkedList.h:55:5: note: expected ‘int (*)(void *, void *)’ but argument is of type ‘int’
- int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
-     ^~~~~~~
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:328:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:326:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-Finished building: ../src/Controller.c
- 
-Building file: ../src/Extras.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:50:5: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  aux=&this->pFirstNode;
+     ^
+../src/LinkedList.c:53:11: error: incompatible types when returning type ‘Node {aka struct Node}’ but ‘Node * {aka struct Node *}’ was expected
+    return *this->pFirstNode;
+           ^~~~~~~~~~~~~~~~~
+../src/LinkedList.c:63:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+     aux=&aux->pNextNode;
+        ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:27:05 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Extras.d" -MT"src/Extras.o" -o "src/Extras.o" "../src/Extras.c"
-../src/Extras.c: In function ‘utn_buscarUltimoId’:
-../src/Extras.c:55:12: warning: variable ‘aux’ set but not used [-Wunused-but-set-variable]
-  Employee *aux;
-            ^~~
-../src/Extras.c: In function ‘utn_getInt’:
-../src/Extras.c:74:12: warning: passing argument 1 of ‘sprintf’ from incompatible pointer type [-Wincompatible-pointer-types]
-    sprintf(pResultado, "%d", number);
-            ^~~~~~~~~~
-In file included from ../src/Extras.c:7:0:
-/usr/include/stdio.h:320:12: note: expected ‘char * restrict’ but argument is of type ‘char **’
- extern int sprintf (char *__restrict __s,
-            ^~~~~~~
-Finished building: ../src/Extras.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:50:5: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  aux=&this->pFirstNode;
+     ^
+../src/LinkedList.c:53:14: error: incompatible types when assigning to type ‘Node * {aka struct Node *}’ from type ‘Node {aka struct Node}’
+    return aux=*this->pFirstNode;
+              ^
+../src/LinkedList.c:63:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+     aux=&aux->pNextNode;
+        ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:27:05 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:50:5: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  aux=&this->pFirstNode;
+     ^
+../src/LinkedList.c:53:14: error: incompatible types when assigning to type ‘Node * {aka struct Node *}’ from type ‘Node {aka struct Node}’
+    return aux=*this->pFirstNode;
+              ^
+../src/LinkedList.c:63:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+     aux=&aux->pNextNode;
+        ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:27:21 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:53:11: error: incompatible types when returning type ‘Node {aka struct Node}’ but ‘Node * {aka struct Node *}’ was expected
+    return *this->pFirstNode;
+           ^~~~~~~~~~~~~~~~~
+../src/LinkedList.c:63:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+     aux=&aux->pNextNode;
+        ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:27:29 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:53:11: warning: return from incompatible pointer type [-Wincompatible-pointer-types]
+    return &this->pFirstNode;
+           ^~~~~~~~~~~~~~~~~
+../src/LinkedList.c:63:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+     aux=&aux->pNextNode;
+        ^
+Finished building: ../src/LinkedList.c
  
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-19:44:10 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+19:41:32 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-make: No se hace nada para 'all'.
-19:44:40 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm=NULL;
-              ^~~~
-../src/Controller.c:200:10: warning: comparison between pointer and integer
-  if(posID==NULL){
-          ^~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:261:10: warning: implicit declaration of function ‘utn_menuSort2’; did you mean ‘utn_menuSort’? [-Wimplicit-function-declaration]
-   case 1:utn_menuSort2();
-          ^~~~~~~~~~~~~
-          utn_menuSort
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:328:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:326:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-19:44:44 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘getNode’:
+../src/LinkedList.c:50:6: error: incompatible types when assigning to type ‘Node {aka struct Node}’ from type ‘Node * {aka struct Node *}’
+  *aux=this->pFirstNode;
+      ^
+../src/LinkedList.c:63:9: error: incompatible types when assigning to type ‘Node {aka struct Node}’ from type ‘struct Node *’
+     *aux=aux->pNextNode;
+         ^
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:08:41 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-make: No se hace nada para 'all'.
-19:47:02 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:16: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm = NULL;
-                ^~~~
-../src/Controller.c:200:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:258:5: warning: implicit declaration of function ‘utn_menuSort2’; did you mean ‘utn_menuSort’? [-Wimplicit-function-declaration]
-     utn_menuSort2();
-     ^~~~~~~~~~~~~
-     utn_menuSort
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:331:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:329:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-Finished building: ../src/Controller.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
  
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-19:47:07 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+20:08:50 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-19:49:41 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+20:10:23 **** Incremental Build of configuration Debug for project likedList ****
 make all 
-Building file: ../src/Controller.c
+Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:16: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm = NULL;
-                ^~~~
-../src/Controller.c:200:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:258:5: warning: implicit declaration of function ‘utn_menuSort2’; did you mean ‘utn_menuSort’? [-Wimplicit-function-declaration]
-     utn_menuSort2();
-     ^~~~~~~~~~~~~
-     utn_menuSort
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:368:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:366:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-Finished building: ../src/Controller.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
  
-Building target: TrabajoPractico3
+Building target: likedList
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
  
-19:49:45 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
+20:10:24 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
-19:51:36 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-../src/Controller.c: In function ‘controller_addEmployee’:
-../src/Controller.c:76:3: warning: implicit declaration of function ‘__fpurge’; did you mean ‘__wur’? [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-   __wur
-../src/Controller.c:70:6: warning: unused variable ‘flag’ [-Wunused-variable]
-  int flag = 0;
-      ^~~~
-../src/Controller.c: In function ‘controller_editEmployee’:
-../src/Controller.c:118:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:135:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_removeEmployee’:
-../src/Controller.c:184:14: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int posID = NULL;
-              ^~~~
-../src/Controller.c:185:16: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-  int confirm = NULL;
-                ^~~~
-../src/Controller.c:200:12: warning: comparison between pointer and integer
-  if (posID == NULL) {
-            ^~
-../src/Controller.c: In function ‘controller_sortEmployee’:
-../src/Controller.c:258:5: warning: implicit declaration of function ‘utn_menuSort2’; did you mean ‘utn_menuSort’? [-Wimplicit-function-declaration]
-     utn_menuSort2();
-     ^~~~~~~~~~~~~
-     utn_menuSort
-../src/Controller.c: In function ‘controller_saveAsBinary’:
-../src/Controller.c:368:6: warning: variable ‘contador’ set but not used [-Wunused-but-set-variable]
-  int contador = 0;
-      ^~~~~~~~
-../src/Controller.c:366:6: warning: variable ‘retorno’ set but not used [-Wunused-but-set-variable]
-  int retorno = -1;
-      ^~~~~~~
-Finished building: ../src/Controller.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-19:51:40 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-19:56:27 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-19:56:29 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-19:57:38 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Employee.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
-Finished building: ../src/Employee.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-19:57:40 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-20:00:37 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Employee.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
-Finished building: ../src/Employee.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
-20:00:40 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-make: No se hace nada para 'all'.
-20:03:47 **** Incremental Build of configuration Debug for project TrabajoPractico3 ****
-make all 
-Building file: ../src/Employee.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Employee.d" -MT"src/Employee.o" -o "src/Employee.o" "../src/Employee.c"
-Finished building: ../src/Employee.c
- 
-Building target: TrabajoPractico3
-Invoking: GCC C Linker
-gcc  -o "TrabajoPractico3"  ./src/Controller.o ./src/Employee.o ./src/Extras.o ./src/TrabajoPractico3.o ./src/parser.o   /home/joariel93/Escritorio/TrabajosPracticos/trabajosPracticos/TrabajoPractico3/LinkedList.a
-Finished building target: TrabajoPractico3
- 
