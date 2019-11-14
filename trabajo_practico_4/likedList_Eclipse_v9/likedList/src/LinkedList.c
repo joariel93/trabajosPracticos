@@ -280,13 +280,17 @@ int ll_indexOf(LinkedList *this, void *pElement) {
 	int flag = 0;
 	Node *pAux;
 	if (this != NULL) {
-		pAux = this->pFirstNode;
+
 		for (i = 0; i < ll_len(this); i++) {
+
+			pAux = getNode(this, i);
+
 			if (pAux->pElement == pElement) {
 				flag = 1;
 				break;
 			}
 		}
+
 		if (flag == 1) {
 			returnAux = i;
 		}
@@ -306,14 +310,11 @@ int ll_indexOf(LinkedList *this, void *pElement) {
 int ll_isEmpty(LinkedList *this) {
 	int returnAux = -1;
 
-	if(this!=NULL&&this->pFirstNode!=NULL)
-	{
-		returnAux=0;
-	}else if(this!=NULL&&this->pFirstNode==NULL)
-	{
-		returnAux=1;
+	if (this != NULL && this->pFirstNode != NULL) {
+		returnAux = 0;
+	} else if (this != NULL && this->pFirstNode == NULL) {
+		returnAux = 1;
 	}
-
 
 	return returnAux;
 }
@@ -330,6 +331,11 @@ int ll_isEmpty(LinkedList *this) {
 int ll_push(LinkedList *this, int index, void *pElement) {
 	int returnAux = -1;
 
+	if (this != NULL && index >= 0 && index <= ll_len(this)) {
+		addNode(this, index, pElement);
+		returnAux = 0;
+	}
+
 	return returnAux;
 }
 
@@ -343,6 +349,14 @@ int ll_push(LinkedList *this, int index, void *pElement) {
  */
 void* ll_pop(LinkedList *this, int index) {
 	void *returnAux = NULL;
+	Node *pAux;
+
+	if (this != NULL && index >= 0 && index < ll_len(this)) {
+
+		pAux = getNode(this, index);
+		returnAux = pAux->pElement;
+		ll_remove(this, index);
+	}
 
 	return returnAux;
 }
@@ -357,7 +371,17 @@ void* ll_pop(LinkedList *this, int index) {
  */
 int ll_contains(LinkedList *this, void *pElement) {
 	int returnAux = -1;
+	int ok = -1;
 
+	if (this != NULL) {
+		ok = ll_indexOf(this, pElement);
+		if (ok != -1) {
+			returnAux = 1;
+		} else {
+			returnAux = 0;
+		}
+
+	}
 	return returnAux;
 }
 
@@ -372,6 +396,28 @@ int ll_contains(LinkedList *this, void *pElement) {
  */
 int ll_containsAll(LinkedList *this, LinkedList *this2) {
 	int returnAux = -1;
+	int i, j, find;
+	int contador = 0;
+
+	if (this != NULL && this2 != NULL) {
+		for (i = 0; i < ll_len(this); i++) {
+
+			for (j = 0; j < ll_len(this2); j++) {
+				find = ll_contains(this2, ll_get(this, i));
+				if (find == 1) {
+					contador++;
+					break;
+				}
+			}
+
+		}
+		if (contador == this2->size) {
+			returnAux = 1;
+		} else {
+			returnAux = 0;
+		}
+
+	}
 
 	return returnAux;
 }
