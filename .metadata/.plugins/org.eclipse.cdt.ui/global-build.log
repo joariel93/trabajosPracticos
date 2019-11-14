@@ -803,3 +803,240 @@ Finished building target: likedList
 21:54:57 **** Incremental Build of configuration Debug for project likedList ****
 make all 
 make: No se hace nada para 'all'.
+22:00:24 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘ll_set’:
+../src/LinkedList.c:185:8: error: too many arguments to function ‘ll_get’
+   lAux=ll_get(this,index,pElement);
+        ^~~~~~
+../src/LinkedList.c:159:7: note: declared here
+ void* ll_get(LinkedList *this, int index) {
+       ^~~~~~
+../src/LinkedList.c:182:14: warning: variable ‘lAux’ set but not used [-Wunused-but-set-variable]
+  LinkedList* lAux;
+              ^~~~
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+make: *** [src/LinkedList.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:01:02 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘ll_set’:
+../src/LinkedList.c:185:18: error: too many arguments to function ‘ll_get’
+   pAux->pElement=ll_get(this,index,pElement);
+                  ^~~~~~
+../src/LinkedList.c:159:7: note: declared here
+ void* ll_get(LinkedList *this, int index) {
+       ^~~~~~
+make: *** [src/LinkedList.o] Error 1
+src/subdir.mk:21: fallo en las instrucciones para el objetivo 'src/LinkedList.o'
+"make all" terminated with exit code 2. Build might be incomplete.
+22:01:35 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘ll_set’:
+../src/LinkedList.c:185:17: warning: ‘pAux’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   pAux->pElement=ll_get(this,index);
+   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:01:36 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:07:59 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:08:00 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:12:19 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:12:20 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:12:46 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:12:47 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:13:32 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:13:33 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:15:39 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:15:39 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:15:40 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:16:48 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:16:49 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:19:31 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘ll_remove’:
+../src/LinkedList.c:206:8: warning: variable ‘pAuxNext’ set but not used [-Wunused-but-set-variable]
+  Node *pAuxNext;
+        ^~~~~~~~
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:19:33 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:19:55 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘ll_remove’:
+../src/LinkedList.c:206:8: warning: variable ‘pAuxNext’ set but not used [-Wunused-but-set-variable]
+  Node *pAuxNext;
+        ^~~~~~~~
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:19:56 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:20:59 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘ll_remove’:
+../src/LinkedList.c:206:8: warning: variable ‘pAuxNext’ set but not used [-Wunused-but-set-variable]
+  Node *pAuxNext;
+        ^~~~~~~~
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:21:00 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:21:20 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:21:22 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
+22:21:33 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+../src/LinkedList.c: In function ‘ll_remove’:
+../src/LinkedList.c:206:8: warning: variable ‘pAuxNext’ set but not used [-Wunused-but-set-variable]
+  Node *pAuxNext;
+        ^~~~~~~~
+Finished building: ../src/LinkedList.c
+ 
+Building target: likedList
+Invoking: GCC C Linker
+gcc  -o "likedList"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: likedList
+ 
+22:21:34 **** Incremental Build of configuration Debug for project likedList ****
+make all 
+make: No se hace nada para 'all'.
