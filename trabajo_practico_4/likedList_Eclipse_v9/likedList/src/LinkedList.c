@@ -435,7 +435,8 @@ int ll_containsAll(LinkedList *this, LinkedList *this2) {
 LinkedList* ll_subList(LinkedList *this, int from, int to) {
 	LinkedList *cloneArray = NULL;
 	int i;
-	if (this!=NULL&&from>=0&&from<=ll_len(this)&&to>from&&to<=ll_len(this)) {
+	if (this != NULL && from >= 0 && from <= ll_len(this) && to > from
+			&& to <= ll_len(this)) {
 		cloneArray = ll_newLinkedList();
 		for (i = from; i <= to; i++) {
 			ll_add(cloneArray, ll_get(this, i));
@@ -455,14 +456,13 @@ LinkedList* ll_subList(LinkedList *this, int from, int to) {
 LinkedList* ll_clone(LinkedList *this) {
 	LinkedList *cloneArray = NULL;
 	int i;
-		if (this!=NULL) {
-			cloneArray = ll_newLinkedList();
-			for (i = 0; i <=ll_len(this); i++) {
-				ll_add(cloneArray, ll_get(this, i));
-			}
-
+	if (this != NULL) {
+		cloneArray = ll_newLinkedList();
+		for (i = 0; i <= ll_len(this); i++) {
+			ll_add(cloneArray, ll_get(this, i));
 		}
 
+	}
 
 	return cloneArray;
 }
@@ -471,11 +471,48 @@ LinkedList* ll_clone(LinkedList *this) {
  * \param pList LinkedList* Puntero a la lista
  * \param pFunc (*pFunc) Puntero a la funcion criterio
  * \param order int  [1] Indica orden ascendente - [0] Indica orden descendente
- * \return int Retorna  (-1) Error: si el puntero a la listas es NULL
+ * \return int Retorna  (-1) Error: si el puntero a la lista es NULL
  ( 0) Si ok
  */
 int ll_sort(LinkedList *this, int (*pFunc)(void*, void*), int order) {
+
 	int returnAux = -1;
+	void *elemento1;
+	void *elemento2;
+	int pasadita = -1;
+
+	int i;
+	if (this != NULL) {
+
+		while (pasadita == -1) {
+			pasadita = 0;
+			for (i = 0; i < ll_len(this) - 2; i++) {
+
+				elemento1 = ll_get(this, i);
+				elemento2 = ll_get(this, i + 1);
+				if (order == 1&&elemento1!=NULL&&elemento2!=NULL) {
+					if (pFunc(elemento1, elemento2) == 1) {
+						ll_set(this, i, elemento2);
+						ll_set(this, i + 1, elemento1);
+						pasadita = -1;
+					} else {
+						continue;
+					}
+				}
+				else {
+					if (pFunc(elemento1, elemento2) == -1) {
+						ll_set(this, i, elemento2);
+						ll_set(this, i + 1, elemento1);
+						pasadita = -1;
+					} else {
+						continue;
+					}
+				}
+			}
+		}
+
+		returnAux = 0;
+	}
 
 	return returnAux;
 
