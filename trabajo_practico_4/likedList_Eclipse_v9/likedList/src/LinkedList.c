@@ -434,6 +434,14 @@ int ll_containsAll(LinkedList *this, LinkedList *this2) {
  */
 LinkedList* ll_subList(LinkedList *this, int from, int to) {
 	LinkedList *cloneArray = NULL;
+	int i;
+	if (this!=NULL&&from>=0&&from<=ll_len(this)&&to>from&&to<=ll_len(this)) {
+		cloneArray = ll_newLinkedList();
+		for (i = from; i <= to; i++) {
+			ll_add(cloneArray, ll_get(this, i));
+		}
+
+	}
 
 	return cloneArray;
 }
@@ -446,6 +454,15 @@ LinkedList* ll_subList(LinkedList *this, int from, int to) {
  */
 LinkedList* ll_clone(LinkedList *this) {
 	LinkedList *cloneArray = NULL;
+	int i;
+		if (this!=NULL) {
+			cloneArray = ll_newLinkedList();
+			for (i = 0; i <=ll_len(this); i++) {
+				ll_add(cloneArray, ll_get(this, i));
+			}
+
+		}
+
 
 	return cloneArray;
 }
