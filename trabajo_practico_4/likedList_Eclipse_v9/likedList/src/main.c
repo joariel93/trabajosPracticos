@@ -17,10 +17,15 @@
  */
 
 #include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
-#include <string.h>
-#include "../testing/inc/main_test.h"
-#include "../inc/LinkedList.h"
+#include "LinkedList.h"
+#include "Controller.h"
+#include "Employee.h"
+#include "Extras.h"
+
+#define ARCHIVOTEXTO "data.csv"
+#define ARCHIVOBINARIO "dataBin.dat"
 
 int main(void) {
 	/*startTesting(1);  // ll_newLinkedList
@@ -41,8 +46,87 @@ int main(void) {
 	startTesting(16); // ll_containsAll
 	startTesting(17); // ll_subList
 	startTesting(18); // ll_clone
-	*/startTesting(19); // ll_sort
+	startTesting(19); // ll_sort*/
+	FILE *pArchivoTxt = ARCHIVOTEXTO;
+		FILE *pArchivoBin;
+		int option;
+		LinkedList *listaEmpleados = ll_newLinkedList();
+		//Employee** lista = (Employee**) malloc(sizeof(Employee*));
+		//Employee** pAuxEmpleado;
+		int cont = 0;
+		int flagArchivoBinario;
+		char resp = 's';
+		char bufId[10];
 
-	return 0;
+		do {
+			utn_menuPrincipal();
+			__fpurge(stdin);
+			scanf("%d", &option);
+			switch (option) {
+			case 1:
+				if (controller_loadFromText(ARCHIVOTEXTO, listaEmpleados) == 0) {
+					printf("Archivo abierto como texto\n");
+				}
+				break;
+			case 2:
+				if (controller_loadFromBinary(ARCHIVOBINARIO, listaEmpleados)
+						== 0) {
+				}
+				break;
+			case 3:
+				if (listaEmpleados != NULL) {
+					controller_addEmployee(listaEmpleados);
+					controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+					controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
+
+				}
+				break;
+			case 4:
+				if (listaEmpleados != NULL) {
+					controller_editEmployee(listaEmpleados);
+					controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+					controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
+				}
+				break;
+			case 5:
+				if (listaEmpleados != NULL) {
+					controller_removeEmployee(listaEmpleados);
+					controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+					controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
+				}
+				break;
+			case 6:
+				if (listaEmpleados != NULL) {
+					controller_ListEmployee(listaEmpleados);
+
+				}
+				break;
+			case 7:
+				if (listaEmpleados != NULL) {
+					controller_sortEmployee(listaEmpleados);
+
+				}
+				break;
+			case 8:
+				if (listaEmpleados != NULL) {
+					controller_saveAsText(ARCHIVOTEXTO, listaEmpleados);
+					printf("\nSe guardo el Archivo en modo texto correctamente\n");
+
+				}
+				break;
+			case 9:
+				if (listaEmpleados != NULL) {
+					controller_saveAsBinary(ARCHIVOBINARIO, listaEmpleados);
+					printf(
+							"\nSe guardo el Archivo en modo binario correctamente\n");
+
+				}
+				break;
+
+			default:
+				return 0;
+			}
+		} while (option != 10);
+		return 0;
 }
 

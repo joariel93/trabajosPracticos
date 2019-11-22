@@ -22,7 +22,7 @@
 #include <string.h>
 
 //INCLUDE LIBRARY TO TEST
-#include "../../inc/LinkedList.h"
+#include "../../src/LinkedList.h"
 
 
 void newTestSetup(void)

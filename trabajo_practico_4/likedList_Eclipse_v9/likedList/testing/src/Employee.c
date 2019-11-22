@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../inc/Employee.h"
+#include "../../src/LinkedList.h"
+#include "../../src/Employee.h"
 
 int compareEmployee(void* pEmployeeA,void* pEmployeeB)
 {
 
-    if(((Employee*)pEmployeeA)->salary > ((Employee*)pEmployeeB)->salary)
+    if(((Employee*)pEmployeeA)->sueldo > ((Employee*)pEmployeeB)->sueldo)
     {
         return 1;
     }
-    if(((Employee*)pEmployeeA)->salary < ((Employee*)pEmployeeB)->salary)
+    if(((Employee*)pEmployeeA)->sueldo < ((Employee*)pEmployeeB)->sueldo)
     {
         return -1;
     }
@@ -21,7 +22,7 @@ int compareEmployee(void* pEmployeeA,void* pEmployeeB)
 
 void printEmployee(Employee* p)
 {
-    printf("Nombre:%s Salario:%.2f\r\n",p->name,p->salary);
+    printf("Nombre:%s Salario:%.2f\r\n",p->nombre,p->sueldo);
 }
 
 /** \brief Set this employee the values recived as parameters
@@ -43,11 +44,8 @@ Employee* newEmployee(int id, char name[],char lastName[],float salary,int secto
     if(pEmployee != NULL)
     {
         pEmployee->id = id;
-        strcpy(pEmployee->name,name);
-        strcpy(pEmployee->lastName,lastName);
-        pEmployee->salary = salary;
-        pEmployee->sector = sector;
-        pEmployee->isEmpty = 0;
+        strcpy(pEmployee->nombre,name);
+        pEmployee->sueldo = salary;
         returnAux = pEmployee;
     }
 

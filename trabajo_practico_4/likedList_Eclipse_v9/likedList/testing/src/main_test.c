@@ -43,7 +43,7 @@
 #include "../inc/containsAllTest.h"
 #include "../inc/sortTest.h"
 
-
+/*
 void startTesting(int testGroup)
 {
 
@@ -234,4 +234,4 @@ void startTesting(int testGroup)
     }
 
 
-}
+}*/
